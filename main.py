@@ -52,10 +52,6 @@ def drawPlayer(displayScreen: pygame.Surface, playerRobot: SoccerRobot, img):
     # assign the playerRectangle to a specific image and position, then draw the rect
     displayScreen.blit(img, playerRect)
 
-    # Optional: Draw a border around the rectangle (for visualization)
-    # color = (0, 0, 0)
-    # pygame.draw.rect(screen, color, playerRect, 1)
-
     # return playerRectangle for collision detection
     return playerRect
 
@@ -93,9 +89,6 @@ def gameIsRunning(
         field.ballPositionX, field.ballPositionY, field.ballSize, field.ballSize
     )
     displayScreen.blit(ballImg, ballRect)
-    # Optional
-    # color = (0, 0, 0)
-    # pygame.draw.rect(screen, color, ballRect, 1)
 
     # playerRectangles for collision detection
     playerRectangles = []
@@ -132,11 +125,9 @@ if __name__ == "__main__":
     # create a screen (width, height)
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
-    # load images
+    # load images and scale
     backgroundImg = pygame.image.load("resources/SoccerFieldBackground2.jpg")
-    backgroundImg = pygame.transform.scale(
-        backgroundImg, (screenWidth, screenHeight)
-    )  # Scale to fit the window
+    backgroundImg = pygame.transform.scale(backgroundImg, (screenWidth, screenHeight))
     soccerRobotImg = pygame.image.load("resources/SoccerRobotPlayer.png")
     soccerRobotImg = pygame.transform.scale(soccerRobotImg, (playerSize, playerSize))
     ballImg = pygame.image.load("resources/Ball2.png")
@@ -167,8 +158,6 @@ if __name__ == "__main__":
 
     # get clock for pygame
     clock = pygame.time.Clock()
-
-    # define all needed rectangles
 
     # if the value of running is changed, the application stops
     running = True
