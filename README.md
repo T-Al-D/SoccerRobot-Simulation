@@ -2,4 +2,4 @@
 
 Simulation of soccer robots. Implemented with pygame.
 
-Images from :
+Images from flatIcon (-> detailed information in "resources"-folder)
