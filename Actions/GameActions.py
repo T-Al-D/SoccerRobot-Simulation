@@ -20,16 +20,29 @@ def gameIsRunning(
     ballImg,
     backgroundImg,
 ):
+    # local import of functions
     from Actions.Collision import ballMovementsThroughCollision
-    from Actions.Drawing import drawPlayer
+    from Actions.Drawing import drawAllPlayers
     from Actions.Movement import playerMovement
+    from Actions.Drawing import drawBall
 
-    # Import the clock from main.py
+    # Import the (global variable) clock from main.py
     from main import clock
 
     # limit frame rate
     clock.tick(fps)
 
+    ################# DRAWING ##################
+    # draw the background image
+    displayScreen.blit(backgroundImg, (0, 0))
+
+    # draw the ball and assign rectangle to it
+    ballRect = drawBall(displayScreen, field, ballImg)
+
+    # playerRectangles for collision detection
+    playerRectangles = drawAllPlayers(displayScreen, field, playerImg)
+
+    ################# MOVEMENT #################
     # get the key that are currently pressed
     keys = pygame.key.get_pressed()
 
@@ -40,24 +53,7 @@ def gameIsRunning(
     randomMove = random.choice(Const.allBasicDirections)
     player2.move(randomMove, player2.playerSteps)
 
-    # draw the background image
-    displayScreen.blit(backgroundImg, (0, 0))
-
-    # draw the ball and assign rectangle to it
-    ballRect = pygame.Rect(
-        field.ballPositionX, field.ballPositionY, field.ballSize, field.ballSize
-    )
-    displayScreen.blit(ballImg, ballRect)
-
-    # playerRectangles for collision detection
-    playerRectangles = []
-
-    # draw all the player on the field
-    for player in field.players:
-        playerRect = drawPlayer(displayScreen, player, playerImg)
-        playerRectangles.append(playerRect)
-
-    # collision
+    ################# COLLISION ################
     ballMovementsThroughCollision(keys, playerRectangles, ballRect, field)
 
     # Update the display
