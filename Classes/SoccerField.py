@@ -6,8 +6,16 @@ class SoccerField:
     The main action happens on a SoccerField
     """
 
-    def __init__(self, status: int, width: int, height: int, playTimeInMinutes: int, ballSize: int):
+    def __init__(
+        self,
+        status: int,
+        width: int,
+        height: int,
+        playTimeInMinutes: int,
+        ballSize: int,
+    ):
         from Classes.SoccerRobot import SoccerRobot  # prevention of circular imports
+
         self.status: int = status
         self.width: int = width
         self.height: int = height
@@ -38,7 +46,7 @@ class SoccerField:
         pass
 
     def moveBall(self, direction: int, step: float):
-        margin = 2
+        margin = 20
         match direction:
             case Const.NORTH_DIRECTION:
                 if self.ballPositionY > margin:
