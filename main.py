@@ -2,7 +2,7 @@ import random
 import sys
 
 import pygame
-print(pygame.ver)
+
 
 # classes from the folders
 from Classes.SoccerField import SoccerField
