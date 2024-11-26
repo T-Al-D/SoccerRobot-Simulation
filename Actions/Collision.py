@@ -16,7 +16,7 @@ def ballMovementsThroughCollision(
 
     collisionDetect = ballRect.collidelist(playerRectangles)
     if collisionDetect >= 0:
-        print(f"ball: X {field.ballPositionX} and Y {field.ballPositionY}")
-        print(collisionDetect)
+        # print(f"ball: X {field.ballPositionX} and Y {field.ballPositionY}")
+        # print(collisionDetect)
         ballSteps = ballRect.width / 2
         ballMovement(keys, field, ballSteps)

@@ -4,7 +4,6 @@ import sys
 import pygame
 
 
-
 # classes from the folders
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
@@ -13,6 +12,7 @@ from Constants import Const
 # get clock for pygame (defined as a global variable)
 clock = pygame.time.Clock()
 
+# "main" function, all objects are defined here
 if __name__ == "__main__":
     from Actions.GameActions import gameIsRunning
 
@@ -86,6 +86,6 @@ if __name__ == "__main__":
             backgroundImg,
         )
 
-    # quit Pygame
+    # quit programm / pygame
     pygame.quit()
     sys.exit()
