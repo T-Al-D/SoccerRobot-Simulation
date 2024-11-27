@@ -10,4 +10,4 @@ Commands: doxygen -g, doxygen Doxyfile
 
 ### Images from flatIcon (-> detailed information in "resources"-folder) : https://www.flaticon.com/
 
-### githubpage with documentation: https://github.com/T-Al-D/SoccerRobot-Simulation
+### githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/
