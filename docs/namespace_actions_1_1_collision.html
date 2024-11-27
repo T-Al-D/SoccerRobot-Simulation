@@ -98,8 +98,10 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a04d492868b519d204ec07e6ae282f17f" id="r_a04d492868b519d204ec07e6ae282f17f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d492868b519d204ec07e6ae282f17f">ballMovementsThroughCollision</a> (pygame.key keys, pygame.Rect playerRectangles, pygame.Rect ballRect, <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a> field)</td></tr>
+<tr class="memdesc:a04d492868b519d204ec07e6ae282f17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the ball depending on collision and ballMovements the player wants to kick the ball in front of him  <br /></td></tr>
 <tr class="separator:a04d492868b519d204ec07e6ae282f17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3976a60da30cbfbf6f6ccc2f2031daa6" id="r_a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3976a60da30cbfbf6f6ccc2f2031daa6">playerCollideWithPlayer</a> (pygame.key keys, pygame.Rect playerRectangles)</td></tr>
+<tr class="memdesc:a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">prevention of players walking 'over' each other if players collide, they are not allowed to cross each other  <br /></td></tr>
 <tr class="separator:a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -132,6 +134,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>move the ball depending on collision and ballMovements the player wants to kick the ball in front of him </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>the key events that got pressed </td></tr>
+    <tr><td class="paramname">playerRectangles</td><td>array with player reactangles to check for collision </td></tr>
+    <tr><td class="paramname">ballRect</td><td>the rectangle which gets checked for collision </td></tr>
+    <tr><td class="paramname">field</td><td>needed later on to chenge the position of the ball</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void This function does not return a value. </dd></dl>
+
 </div>
 </div>
 <a id="a3976a60da30cbfbf6f6ccc2f2031daa6" name="a3976a60da30cbfbf6f6ccc2f2031daa6"></a>
@@ -152,6 +166,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>prevention of players walking 'over' each other if players collide, they are not allowed to cross each other </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>the key events that got pressed </td></tr>
+    <tr><td class="paramname">playerRectangles</td><td>array with player reactangles to check for collision</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void This function does not return a value. </dd></dl>
 
 </div>
 </div>

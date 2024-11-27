@@ -1,8 +1,8 @@
 var searchData=
 [
   ['screen_0',['screen',['../namespacemain.html#a3492c3460d3b1a7a0bd088f90f8e0c79',1,'main']]],
-  ['screenheight_1',['screenHeight',['../namespacemain.html#aa896ee2344d9bd32339f4263d2fa2f90',1,'main']]],
-  ['screenwidth_2',['screenWidth',['../namespacemain.html#a4bdf072798b281ffe25627013b55762a',1,'main']]],
+  ['screenheight_1',['screenHeight',['../namespacemain.html#a10246d3a18511a7b72f64306a04f6158',1,'main']]],
+  ['screenwidth_2',['screenWidth',['../namespacemain.html#a2e530f41aa8f8f29f4e36b150809ee81',1,'main']]],
   ['size_3',['size',['../class_classes_1_1_ball_1_1_ball.html#ab0bd30f2e254c697edde207b57ee67ce',1,'Classes::Ball::Ball']]],
   ['soccerfield_4',['soccerField',['../namespacemain.html#ae67bd4e6a01c401a3b02acc87224b9c8',1,'main']]],
   ['soccerrobot1_5',['soccerRobot1',['../namespacemain.html#acd6df47cedc7abe33f2f36bac7f1eaa0',1,'main']]],

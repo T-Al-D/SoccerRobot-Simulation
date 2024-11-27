@@ -96,10 +96,14 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Classes.SoccerField.SoccerField Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class that creates a 'playing flied'.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad0d69bc74b4f21effe46a79f5518d881" id="r_ad0d69bc74b4f21effe46a79f5518d881"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d69bc74b4f21effe46a79f5518d881">__init__</a> (self, int <a class="el" href="#a17a27eb78b95f26a664668f1769e6903">status</a>, int <a class="el" href="#aa3277e1fae7075d4cbc93b0cdfe20a9c">width</a>, int <a class="el" href="#a9e2d8bd99e5dc2d12fa96a92c1c999d3">height</a>, int <a class="el" href="#a38f77b3f736d255447b6032bf52eea5a">playTimeInMinutes</a>, int <a class="el" href="#a37b30729ee42161eddcb9bc44115543c">ballSize</a>)</td></tr>
+<tr class="memdesc:ad0d69bc74b4f21effe46a79f5518d881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Soccerfield class.  <br /></td></tr>
 <tr class="separator:ad0d69bc74b4f21effe46a79f5518d881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18d5a1cd507c21d1722c7c69d061dd66" id="r_a18d5a1cd507c21d1722c7c69d061dd66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18d5a1cd507c21d1722c7c69d061dd66">returnTeamScore</a> (self)</td></tr>
 <tr class="separator:a18d5a1cd507c21d1722c7c69d061dd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,6 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a288892671a3ab522c0d896fa41a317cd" id="r_a288892671a3ab522c0d896fa41a317cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a288892671a3ab522c0d896fa41a317cd">getBallPosition</a> (self)</td></tr>
 <tr class="separator:a288892671a3ab522c0d896fa41a317cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeee9f737f8f837b6e80bf765b5ebb58" id="r_adeee9f737f8f837b6e80bf765b5ebb58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeee9f737f8f837b6e80bf765b5ebb58">moveBall</a> (self, int direction, float step)</td></tr>
+<tr class="memdesc:adeee9f737f8f837b6e80bf765b5ebb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the x or y position of the ball on the field  <br /></td></tr>
 <tr class="separator:adeee9f737f8f837b6e80bf765b5ebb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643254f7e64dbf04cc20440ca71ca35b" id="r_a643254f7e64dbf04cc20440ca71ca35b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a643254f7e64dbf04cc20440ca71ca35b">endGame</a> (self)</td></tr>
 <tr class="separator:a643254f7e64dbf04cc20440ca71ca35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,8 +147,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a20ced22f3d5c2e87f2fd73d34025c78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">The main action happens on a SoccerField
-</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p>A class that creates a 'playing flied'. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad0d69bc74b4f21effe46a79f5518d881" name="ad0d69bc74b4f21effe46a79f5518d881"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0d69bc74b4f21effe46a79f5518d881">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -182,6 +187,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for Soccerfield class. </p>
+<p>Initializes the most necessary data </p>
 
 </div>
 </div>
@@ -260,6 +268,16 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>moves the x or y position of the ball on the field </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>the direction in which the ball should be moved </td></tr>
+    <tr><td class="paramname">step</td><td>in what steps should the ball be moved</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void This function does not return a value. </dd></dl>
 
 </div>
 </div>
