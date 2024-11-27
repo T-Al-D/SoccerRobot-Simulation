@@ -41,23 +41,15 @@ class SoccerRobot:
             case Const.NORTH_DIRECTION:
                 if self.positionY > margin:
                     self.positionY -= step
-            case Const.NORTH_EAST_DIRECTION:
-                pass
             case Const.EAST_DIRECTION:
-                if self.positionX < self.field.width - self.playerSize - margin:
+                if self.positionX < (self.field.width - self.playerSize - margin):
                     self.positionX += step
-            case Const.SOUTH_EAST_DIRECTION:
-                pass
             case Const.SOUTH_DIRECTION:
-                if self.positionY < self.field.height - self.playerSize - margin:
+                if self.positionY < (self.field.height - self.playerSize - margin):
                     self.positionY += step
-            case Const.SOUTH_WEST_DIRECTION:
-                pass
             case Const.WEST_DIRECTION:
                 if self.positionX > margin:
                     self.positionX -= step
-            case Const.NORTH_WEST_DIRECTION:
-                pass
             case _:
                 pass
 

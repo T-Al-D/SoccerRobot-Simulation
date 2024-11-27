@@ -51,23 +51,15 @@ class SoccerField:
             case Const.NORTH_DIRECTION:
                 if self.ballPositionY > margin:
                     self.ballPositionY -= step
-            case Const.NORTH_EAST_DIRECTION:
-                pass
             case Const.EAST_DIRECTION:
-                if self.ballPositionX < self.width - self.ballSize - margin:
+                if self.ballPositionX < (self.width - self.ballSize - margin):
                     self.ballPositionX += step
-            case Const.SOUTH_EAST_DIRECTION:
-                pass
             case Const.SOUTH_DIRECTION:
-                if self.ballPositionY < self.height - self.ballSize + margin:
+                if self.ballPositionY < (self.height - self.ballSize - margin):
                     self.ballPositionY += step
-            case Const.SOUTH_WEST_DIRECTION:
-                pass
             case Const.WEST_DIRECTION:
                 if self.ballPositionX > margin:
                     self.ballPositionX -= step
-            case Const.NORTH_WEST_DIRECTION:
-                pass
             case _:
                 pass
 

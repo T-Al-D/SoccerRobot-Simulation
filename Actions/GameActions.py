@@ -21,10 +21,11 @@ def gameIsRunning(
     backgroundImg,
 ):
     # local import of functions
-    from Actions.Collision import ballMovementsThroughCollision
+    from Actions.Drawing import drawBall
     from Actions.Drawing import drawAllPlayers
     from Actions.Movement import playerMovement
-    from Actions.Drawing import drawBall
+    from Actions.Collision import playerCollideWithPlayer
+    from Actions.Collision import ballMovementsThroughCollision
 
     # Import the (global variable) clock from main.py
     from main import clock
@@ -55,6 +56,7 @@ def gameIsRunning(
 
     ################# COLLISION ################
     ballMovementsThroughCollision(keys, playerRectangles, ballRect, field)
+    playerCollideWithPlayer(keys, playerRectangles)
 
     # Update the display
     pygame.display.flip()
