@@ -1,4 +1,9 @@
-import random
+"""!
+@file 
+@brief "main" file in the project: Code starts here.
+@author BluMay, EN-AK, T-Al-D
+"""
+
 import sys
 
 import pygame
@@ -14,6 +19,10 @@ clock = pygame.time.Clock()
 
 # "main" function, all objects are defined here
 if __name__ == "__main__":
+    """!
+    @brief Initializes all needed information for the programm/simulation
+    simulation runs in endless while-loop, until exit
+    """
     from Actions.GameActions import gameIsRunning
 
     # init pygame
@@ -25,12 +34,13 @@ if __name__ == "__main__":
     pygame.display.set_icon(displayIcon)
 
     # window size
-    screenWidth, screenHeight = 800, 600
+    screenWidth: int = 800
+    screenHeight: int = 600
 
     # scale the player image to the desired size (New width and height)
-    ballSize = 35
+    ballSize: int = 35
     playerSize: int = 55
-    playerSteps = 2
+    playerSteps: int = 2
 
     # create a screen (width, height)
     screen = pygame.display.set_mode((screenWidth, screenHeight))
@@ -67,7 +77,7 @@ if __name__ == "__main__":
     soccerField.players.append(soccerRobot2)
 
     # if the value of running is changed, the application stops
-    running = True
+    running: bool = True
     while running:
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
