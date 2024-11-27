@@ -1,0 +1,15 @@
+# name of workflow
+name: basic test
+
+# the workflow will alwas from on ANY push of this repository
+on: push
+
+# Which jobs should be executed in ths workflow ?
+jobs:
+  mini-test:
+    # run on a (certain) virtual maschine
+    runs-on: ubuntu-latest
+    # steps to take while runnig the jobs
+    steps:
+      - name: my-mini-test
+        run: echo "Hello World!"
