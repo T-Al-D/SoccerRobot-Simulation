@@ -53,6 +53,6 @@ jobs:
 
       # Run the main.py script, exit with error if it fails (python main.py)
       # run tests from root of the directory (test folder)
-      - name: Run main.py
+      - name: Run pytests
         run: |
           pytest -s -v  || exit 1
