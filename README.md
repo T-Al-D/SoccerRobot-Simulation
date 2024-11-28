@@ -1,6 +1,7 @@
 # SoccerRobot-Simulation
 
 [![basic test](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/main.yml/badge.svg)](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/main.yml)
+[![pages-build-deployment](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/pages/pages-build-deployment)
 
 # Simulation of soccer robots in Python.
 
