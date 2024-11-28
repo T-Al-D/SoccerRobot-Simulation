@@ -1,14 +1,25 @@
 # name of workflow
 name: basic test
 
-# the workflow will alwas from on ANY push of this repository
-on: push
+# the workflow will alwas from on ANY push or pull request of this repository
+on:
+  push:
+  pull_request:
 
 # Which jobs should be executed in ths workflow ?
 jobs:
-  mini-test:
+  basic-mini-test:
+    # just because one test fails, dosen´t mean all the others should also fail
+    stategy:
+      fail-fast: false
+    matrix:
+      # multiple GitHub-Runners are going to run the different os
+      os: [ubuntu-latest, macos-latest, windows-latest]
+      python-version:
+        - "3.12"
     # run on a (certain) virtual maschine
-    runs-on: ubuntu-latest
+    name: OS-Tests
+    runs-on: ${{ matrix.os }}
     # steps to take while runnig the jobs
     steps:
       # fist of all, check code in repository
@@ -18,10 +29,10 @@ jobs:
       - name: Check Code in repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.12
+      - name: Set up Python(-versions)
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
 
       # verify Python version
       - name: Check Python version
@@ -39,4 +50,4 @@ jobs:
       - name: Run main.py
         run: |
           python main.py || exit 1
-        timeout-minutes: 0.5
+        timeout-minutes: 1
