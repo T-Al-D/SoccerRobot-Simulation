@@ -1,0 +1,59 @@
+# name of workflow
+name: basic test
+
+# the workflow will alwas from on ANY push or pull request of this repository
+on:
+  push:
+  pull_request:
+
+# the github runner is ONLY ALLOWED TO READ !
+permissions:
+  contents: read
+
+# Which jobs should be executed in ths workflow ?
+jobs:
+  basic-mini-test:
+    # just because one test fails, dosen´t mean all the others should also fail
+    strategy:
+      fail-fast: false
+      matrix:
+        # multiple GitHub-Runners are going to run the different os
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version:
+          - "3.10"
+          - "3.12"
+    # run on a (certain) virtual maschine
+    name: OS-Tests
+    runs-on: ${{ matrix.os }}
+    # steps to take while runnig the jobs
+    steps:
+      # fist of all, check code in repository
+      # "uses" references an action that has already been created
+      # either use "uses" or "run" BUT NOT TOGETHER!!!
+      # https://github.com/actions/setup-python
+      - name: Check Code in repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python(-versions)
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # verify Python version
+      - name: Check Python version
+        run: |
+          python --version
+
+      # execute multiple commands to install pygame
+      - name: Install pip, pygame and pytest
+        run: |
+          python -m pip install --upgrade pip
+          pip --version
+          pip install pygame
+          pip install pytest
+
+      # Run the main.py script, exit with error if it fails (python main.py)
+      # run tests from root of the directory (test folder)
+      - name: Run pytests
+        run: |
+          pytest -s -v  || exit 1

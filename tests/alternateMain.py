@@ -1,12 +1,5 @@
-"""!
-@file 
-@brief "main" file in the project: Code starts here.
-@author BluMay, EN-AK, T-Al-D
-"""
-
-import sys
-import os
 import pygame
+import os
 
 # classes from the folders
 from Classes.SoccerField import SoccerField
@@ -18,11 +11,11 @@ os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
 # get clock for pygame (defined as a global variable)
 clock = pygame.time.Clock()
 
+
 # "main" function, all objects are defined here
-if __name__ == "__main__":
-    """!
-    @brief Initializes all needed information for the programm/simulation
-    simulation runs in endless while-loop, until exit
+def runAlternateMainForDuration(durationInMs):
+    """
+    Runs the game for a specific amount of time (in milliseconds).
     """
     from Actions.Images import loadAndScaleImage
     from Actions.GameActions import gameIsRunning
@@ -81,7 +74,14 @@ if __name__ == "__main__":
 
     # if the value of running is changed, the application stops
     running: bool = True
+    # Track when the loop starts
+    startTicks = pygame.time.get_ticks()
+
     while running:
+        # if we've run for the duration time, stop
+        if (pygame.time.get_ticks() - startTicks) >= durationInMs:
+            running = False
+
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -99,6 +99,4 @@ if __name__ == "__main__":
             backgroundImg,
         )
 
-    # quit programm / pygame
     pygame.quit()
-    sys.exit()

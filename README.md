@@ -1,5 +1,7 @@
 # SoccerRobot-Simulation
 
+[![basic test](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/main.yml/badge.svg)](https://github.com/T-Al-D/SoccerRobot-Simulation/actions/workflows/main.yml)
+
 # Simulation of soccer robots in Python.
 
 ### Implemented with pygame : https://www.pygame.org/news

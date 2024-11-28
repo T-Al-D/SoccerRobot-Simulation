@@ -8,7 +8,9 @@ from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 
 
-def drawBall(displayScreen: pygame.Surface, field: SoccerField, ballImg: pygame.image):
+def drawBall(
+    displayScreen: pygame.Surface, field: SoccerField, ballImg: pygame.image
+) -> pygame.rect:
     """!
     @brief draw ball on screen
     create a rectangle and draw it on screen with an image on it
@@ -28,7 +30,7 @@ def drawBall(displayScreen: pygame.Surface, field: SoccerField, ballImg: pygame.
 
 def drawPlayer(
     displayScreen: pygame.Surface, playerRobot: SoccerRobot, playerImg: pygame.image
-):
+) -> pygame.rect:
     """!
     @brief draw player on screen
     create a rectangle and draw it on screen with an image on it

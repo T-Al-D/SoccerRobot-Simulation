@@ -1,9 +1,26 @@
 var searchData=
 [
-  ['t_20al_20d_20github_20io_20soccerrobot_20simulation_0',['githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['team_1',['team',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a41e510c44c39cf12955545d749cdad08',1,'Classes::SoccerRobot::SoccerRobot']]],
-  ['team1goalstatus_2',['team1GoalStatus',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#ab2fcce1538e977c66b87cbd993256cd6',1,'Classes::SoccerField::SoccerField']]],
-  ['team1score_3',['team1Score',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a7a1fb374c6a77e9e2d5d0a27ea6ed28d',1,'Classes::SoccerField::SoccerField']]],
-  ['team2goalstatus_4',['team2GoalStatus',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#af7682b58432611fc8a9c87b70487783d',1,'Classes::SoccerField::SoccerField']]],
-  ['team2score_5',['team2Score',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a81771a3542a6d52b2650c2e2eb7f28a7',1,'Classes::SoccerField::SoccerField']]]
+  ['screen_0',['screen',['../namespacemain.html#a3492c3460d3b1a7a0bd088f90f8e0c79',1,'main']]],
+  ['screenheight_1',['screenHeight',['../namespacemain.html#a10246d3a18511a7b72f64306a04f6158',1,'main']]],
+  ['screenwidth_2',['screenWidth',['../namespacemain.html#a2e530f41aa8f8f29f4e36b150809ee81',1,'main']]],
+  ['shootball_3',['shootBall',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a1e309eafa7a627f35c78ada4f7bd33d8',1,'Classes::SoccerRobot::SoccerRobot']]],
+  ['simulation_4',['Simulation',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/'],['../md__r_e_a_d_m_e.html',1,'SoccerRobot-Simulation']]],
+  ['simulation_20of_20soccer_20robots_20in_20python_5',['Simulation of soccer robots in Python.',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
+  ['size_6',['size',['../class_classes_1_1_ball_1_1_ball.html#ab0bd30f2e254c697edde207b57ee67ce',1,'Classes::Ball::Ball']]],
+  ['soccer_20robots_20in_20python_7',['Simulation of soccer robots in Python.',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
+  ['soccerfield_8',['SoccerField',['../class_classes_1_1_soccer_field_1_1_soccer_field.html',1,'Classes::SoccerField']]],
+  ['soccerfield_9',['soccerField',['../namespacemain.html#ae67bd4e6a01c401a3b02acc87224b9c8',1,'main']]],
+  ['soccerfield_2epy_10',['SoccerField.py',['../_soccer_field_8py.html',1,'']]],
+  ['soccerrobot_11',['SoccerRobot',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html',1,'Classes::SoccerRobot']]],
+  ['soccerrobot_20simulation_12',['SoccerRobot Simulation',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/'],['../md__r_e_a_d_m_e.html',1,'SoccerRobot-Simulation']]],
+  ['soccerrobot_2epy_13',['SoccerRobot.py',['../_soccer_robot_8py.html',1,'']]],
+  ['soccerrobot1_14',['soccerRobot1',['../namespacemain.html#acd6df47cedc7abe33f2f36bac7f1eaa0',1,'main']]],
+  ['soccerrobot2_15',['soccerRobot2',['../namespacemain.html#a2a0cfc7a49bad47170bb2ba2c28bbebd',1,'main']]],
+  ['soccerrobotimg_16',['soccerRobotImg',['../namespacemain.html#af142438f030eeebd0a08f037ac0340d7',1,'main']]],
+  ['sources_3a_17',['Sources:',['../md_resources_2_mention_of_sources.html',1,'']]],
+  ['south_5fdirection_18',['SOUTH_DIRECTION',['../namespace_constants_1_1_const.html#ad30b1fe8ad714a0286e21f974c14b4a1',1,'Constants::Const']]],
+  ['south_5feast_5fdirection_19',['SOUTH_EAST_DIRECTION',['../namespace_constants_1_1_const.html#a22e5613057750d04f15774fe15d7f80e',1,'Constants::Const']]],
+  ['south_5fwest_5fdirection_20',['SOUTH_WEST_DIRECTION',['../namespace_constants_1_1_const.html#a6384a5b99e76b40d509857b3609109ba',1,'Constants::Const']]],
+  ['speed_21',['speed',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#afaa700a70d6ad9f1d41987c884237280',1,'Classes::SoccerRobot::SoccerRobot']]],
+  ['status_22',['status',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a17a27eb78b95f26a664668f1769e6903',1,'Classes.SoccerField.SoccerField.status'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a8caf78409ac3848e08bbdd46f5f94c4c',1,'Classes.SoccerRobot.SoccerRobot.status']]]
 ];
