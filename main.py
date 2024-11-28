@@ -4,6 +4,11 @@
 @author BluMay, EN-AK, T-Al-D
 """
 
+import os
+
+# pygame sound not use real sound hardware
+os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
+
 import sys
 
 import pygame
