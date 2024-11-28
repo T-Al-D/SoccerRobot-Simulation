@@ -6,6 +6,10 @@ on:
   push:
   pull_request:
 
+# the github runner is ONLY ALLOWED TO READ !
+permissions:
+  contents: read
+
 # Which jobs should be executed in ths workflow ?
 jobs:
   basic-mini-test:
@@ -46,7 +50,15 @@ jobs:
           pip --version
           pip install pygame
 
-      # Run the main.py script, exit with error if it fails
+      # Set up Xvfb for headless testing (Display replacement)
+      - name: Set up Xvfb (Virtual Display)
+        run: |
+          sudo apt-get install -y xvfb
+          export DISPLAY=:99.0
+          Xvfb :99 -screen 0 1024x768x24 &
+
+      # Run the main.py script (as if on display),
+      # exit with error if it fails
       - name: Run main.py
         run: |
           python main.py || exit 1

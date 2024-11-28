@@ -4,20 +4,16 @@
 @author BluMay, EN-AK, T-Al-D
 """
 
-import os
-
-# pygame sound not use real sound hardware
-os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
-
 import sys
-
+import os
 import pygame
-
 
 # classes from the folders
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
-from Constants import Const
+
+# pygame sound not use real sound hardware
+os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
 
 # get clock for pygame (defined as a global variable)
 clock = pygame.time.Clock()
@@ -86,7 +82,7 @@ if __name__ == "__main__":
     while running:
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
-            if event.type is pygame.QUIT:
+            if event.type == pygame.QUIT:
                 running = False
 
         # all game logic is in here
