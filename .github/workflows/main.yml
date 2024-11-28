@@ -23,6 +23,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # verify Python version
       - name: Check Python version
         run: |
           python --version
@@ -33,4 +34,8 @@ jobs:
           python -m pip install --upgrade pip
           pip --version
           pip install pygame
-          pip show pygame
+
+      # Run the main.py script, exit with error if it fails
+      - name: Run main.py
+        run: |
+          python main.py || exit 1
