@@ -1,9 +1,14 @@
+"""!
+@file
+@brief class for SoccerField (main action on Soccerfield)
+"""
+
 from Constants import Const
 
 
 class SoccerField:
-    """
-    The main action happens on a SoccerField
+    """!
+    @brief A class that creates a 'playing flied'.
     """
 
     def __init__(
@@ -14,6 +19,10 @@ class SoccerField:
         playTimeInMinutes: int,
         ballSize: int,
     ):
+        """!
+        @brief Constructor for Soccerfield class.
+        Initializes the most necessary data
+        """
         from Classes.SoccerRobot import SoccerRobot  # prevention of circular imports
 
         self.status: int = status
@@ -30,7 +39,6 @@ class SoccerField:
         self.ballPositionY: int = int(height / 2.09)
         self.players: list[SoccerRobot] = []
 
-    # Methods
     def returnTeamScore(self):
         return [self.team1Score, self.team2Score]
 
@@ -46,28 +54,28 @@ class SoccerField:
         pass
 
     def moveBall(self, direction: int, step: float):
+        """!
+        @brief moves the x or y position of the ball on the field
+
+        @param direction the direction in which the ball should be moved
+        @param step in what steps should the ball be moved
+
+        @return void This function does not return a value.
+        """
         margin = 20
         match direction:
             case Const.NORTH_DIRECTION:
                 if self.ballPositionY > margin:
                     self.ballPositionY -= step
-            case Const.NORTH_EAST_DIRECTION:
-                pass
             case Const.EAST_DIRECTION:
-                if self.ballPositionX < self.width - self.ballSize - margin:
+                if self.ballPositionX < (self.width - self.ballSize - margin):
                     self.ballPositionX += step
-            case Const.SOUTH_EAST_DIRECTION:
-                pass
             case Const.SOUTH_DIRECTION:
-                if self.ballPositionY < self.height - self.ballSize + margin:
+                if self.ballPositionY < (self.height - self.ballSize - margin):
                     self.ballPositionY += step
-            case Const.SOUTH_WEST_DIRECTION:
-                pass
             case Const.WEST_DIRECTION:
                 if self.ballPositionX > margin:
                     self.ballPositionX -= step
-            case Const.NORTH_WEST_DIRECTION:
-                pass
             case _:
                 pass
 

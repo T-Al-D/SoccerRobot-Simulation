@@ -1,13 +1,17 @@
+"""!
+@file
+@brief class for SoccerRobot (main-actor on Soccerfield)
+"""
+
 from Classes.SoccerField import SoccerField
 from Constants import Const
 
 
 class SoccerRobot:
-    """
-    A SoccerRobot is the main actor on the SoccerField
+    """!
+    @brief SoccerRobots kick the ball on the field (main-actors on the field)
     """
 
-    # constructor / attributes
     def __init__(
         self,
         id: int,
@@ -18,6 +22,10 @@ class SoccerRobot:
         positionY: int,
         field: SoccerField,
     ):
+        """!
+        @brief Constructor for SoccerRobot class.
+        Initializes the most necessary data
+        """
         from Classes.SoccerField import SoccerField  # prevention of circular imports
 
         self.id: int = id
@@ -34,30 +42,29 @@ class SoccerRobot:
         self.collision: bool = False
         self.field: SoccerField = field
 
-    # Methods
     def move(self, direction: int, step: float):
+        """!
+        @brief moves the x or y position of the robot on the field
+
+        @param direction the direction in which the robot should be moved
+        @param step in what steps should the robot be moved
+
+        @return void This function does not return a value.
+        """
         margin = 20
         match direction:
             case Const.NORTH_DIRECTION:
                 if self.positionY > margin:
                     self.positionY -= step
-            case Const.NORTH_EAST_DIRECTION:
-                pass
             case Const.EAST_DIRECTION:
-                if self.positionX < self.field.width - self.playerSize - margin:
+                if self.positionX < (self.field.width - self.playerSize - margin):
                     self.positionX += step
-            case Const.SOUTH_EAST_DIRECTION:
-                pass
             case Const.SOUTH_DIRECTION:
-                if self.positionY < self.field.height - self.playerSize - margin:
+                if self.positionY < (self.field.height - self.playerSize - margin):
                     self.positionY += step
-            case Const.SOUTH_WEST_DIRECTION:
-                pass
             case Const.WEST_DIRECTION:
                 if self.positionX > margin:
                     self.positionX -= step
-            case Const.NORTH_WEST_DIRECTION:
-                pass
             case _:
                 pass
 

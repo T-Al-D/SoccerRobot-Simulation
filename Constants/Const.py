@@ -1,3 +1,9 @@
+"""!
+@file
+@brief contants for the project
+variables that only need to be declared once
+"""
+
 from typing import Final
 
 # CONSTANTS
