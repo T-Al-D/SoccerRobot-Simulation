@@ -109,11 +109,11 @@ Variables</h2></td></tr>
 <tr class="separator:a4f5fefe3a450d473928a129fdce00045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3492c3460d3b1a7a0bd088f90f8e0c79" id="r_a3492c3460d3b1a7a0bd088f90f8e0c79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3492c3460d3b1a7a0bd088f90f8e0c79">screen</a> = pygame.display.set_mode((<a class="el" href="#a2e530f41aa8f8f29f4e36b150809ee81">screenWidth</a>, <a class="el" href="#a10246d3a18511a7b72f64306a04f6158">screenHeight</a>))</td></tr>
 <tr class="separator:a3492c3460d3b1a7a0bd088f90f8e0c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8714fbf2b37e4224b8f525a5b27446f1" id="r_a8714fbf2b37e4224b8f525a5b27446f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8714fbf2b37e4224b8f525a5b27446f1">backgroundImg</a> = pygame.image.load(&quot;resources/SoccerFieldBackground2.jpg&quot;)</td></tr>
+<tr class="memitem:a8714fbf2b37e4224b8f525a5b27446f1" id="r_a8714fbf2b37e4224b8f525a5b27446f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8714fbf2b37e4224b8f525a5b27446f1">backgroundImg</a></td></tr>
 <tr class="separator:a8714fbf2b37e4224b8f525a5b27446f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af142438f030eeebd0a08f037ac0340d7" id="r_af142438f030eeebd0a08f037ac0340d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af142438f030eeebd0a08f037ac0340d7">soccerRobotImg</a> = pygame.image.load(&quot;resources/SoccerRobotPlayer.png&quot;)</td></tr>
+<tr class="memitem:af142438f030eeebd0a08f037ac0340d7" id="r_af142438f030eeebd0a08f037ac0340d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af142438f030eeebd0a08f037ac0340d7">soccerRobotImg</a></td></tr>
 <tr class="separator:af142438f030eeebd0a08f037ac0340d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270b29db2f61247e34b7bf7b9347e2e0" id="r_a270b29db2f61247e34b7bf7b9347e2e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270b29db2f61247e34b7bf7b9347e2e0">ballImg</a> = pygame.image.load(&quot;resources/Ball2.png&quot;)</td></tr>
+<tr class="memitem:a270b29db2f61247e34b7bf7b9347e2e0" id="r_a270b29db2f61247e34b7bf7b9347e2e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a270b29db2f61247e34b7bf7b9347e2e0">ballImg</a> = loadAndScaleImage(&quot;resources/Ball2.png&quot;, <a class="el" href="#a135ec7e43d56f3f57c92fea03d0678dd">ballSize</a>, <a class="el" href="#a135ec7e43d56f3f57c92fea03d0678dd">ballSize</a>)</td></tr>
 <tr class="separator:a270b29db2f61247e34b7bf7b9347e2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67bd4e6a01c401a3b02acc87224b9c8" id="r_ae67bd4e6a01c401a3b02acc87224b9c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae67bd4e6a01c401a3b02acc87224b9c8">soccerField</a> = <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a>(0, <a class="el" href="#a2e530f41aa8f8f29f4e36b150809ee81">screenWidth</a>, <a class="el" href="#a10246d3a18511a7b72f64306a04f6158">screenHeight</a>, 1, <a class="el" href="#a135ec7e43d56f3f57c92fea03d0678dd">ballSize</a>)</td></tr>
 <tr class="separator:ae67bd4e6a01c401a3b02acc87224b9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,11 +132,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">main.backgroundImg = pygame.image.load(&quot;resources/SoccerFieldBackground2.jpg&quot;)</td>
+          <td class="memname">main.backgroundImg</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line"><span class="lineno">    1</span>=  loadAndScaleImage(</div>
+<div class="line"><span class="lineno">    2</span>        <span class="stringliteral">&quot;resources/SoccerFieldBackground2.jpg&quot;</span>, screenWidth, screenHeight</div>
+<div class="line"><span class="lineno">    3</span>    )</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a270b29db2f61247e34b7bf7b9347e2e0" name="a270b29db2f61247e34b7bf7b9347e2e0"></a>
@@ -146,7 +149,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">main.ballImg = pygame.image.load(&quot;resources/Ball2.png&quot;)</td>
+          <td class="memname">main.ballImg = loadAndScaleImage(&quot;resources/Ball2.png&quot;, <a class="el" href="#a135ec7e43d56f3f57c92fea03d0678dd">ballSize</a>, <a class="el" href="#a135ec7e43d56f3f57c92fea03d0678dd">ballSize</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -346,11 +349,14 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">main.soccerRobotImg = pygame.image.load(&quot;resources/SoccerRobotPlayer.png&quot;)</td>
+          <td class="memname">main.soccerRobotImg</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line"><span class="lineno">    1</span>=  loadAndScaleImage(</div>
+<div class="line"><span class="lineno">    2</span>        <span class="stringliteral">&quot;resources/SoccerRobotPlayer.png&quot;</span>, playerSize, playerSize</div>
+<div class="line"><span class="lineno">    3</span>    )</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

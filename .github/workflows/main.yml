@@ -20,7 +20,8 @@ jobs:
         # multiple GitHub-Runners are going to run the different os
         os: [ubuntu-latest, macos-latest, windows-latest]
         python-version:
-          - "3.12"
+          - "3.10"
+          - "3.13"
     # run on a (certain) virtual maschine
     name: OS-Tests
     runs-on: ${{ matrix.os }}
