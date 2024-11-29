@@ -19,10 +19,9 @@ os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
 clock = pygame.time.Clock()
 
 # "main" function, all objects are defined here
-if __name__ == "__main__":
-    """!
-    @brief Initializes all needed information for the programm/simulation
-    simulation runs in endless while-loop, until exit
+def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
+    """
+    Runs the game for a specific amount of time (in milliseconds).
     """
     from Actions.Images import loadAndScaleImage
     from Actions.GameActions import gameIsRunning
@@ -81,7 +80,16 @@ if __name__ == "__main__":
 
     # if the value of running is changed, the application stops
     running: bool = True
+    # Track when the loop starts
+    startTicks = pygame.time.get_ticks()
+
     while running:
+        # if we only want to run our simulation for a short time during the tests
+        if runForDuration is True:
+            # if we've run for the duration time, stop
+            if (pygame.time.get_ticks() - startTicks) >= durationInMs:
+                running = False
+
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -98,7 +106,16 @@ if __name__ == "__main__":
             ballImg,
             backgroundImg,
         )
+        # Ensure the window gets updated
+        pygame.display.update()  
 
-    # quit programm / pygame
     pygame.quit()
+
+# "main" function, all objects are defined here
+if __name__ == "__main__":
+    """!
+    @brief Initializes all needed information for the programm/simulation
+    simulation runs in endless while-loop, until exit
+    """
+    runSimulation()
     sys.exit()
