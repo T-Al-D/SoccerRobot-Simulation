@@ -9,6 +9,7 @@ import os
 import pygame
 
 # classes from the folders
+from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 
@@ -18,12 +19,17 @@ os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
 # get clock for pygame (defined as a global variable)
 clock = pygame.time.Clock()
 
+
 # "main" function, all objects are defined here
-def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
+def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
+    """!
+    @brief executes the logic, can me run for limited time (in tests)
+
+    @param runForDuration tells the function if it has to run for limited time
+    @param durationInMs int value for amount of ms
+
+    @return void This function does not return a value.
     """
-    Runs the game for a specific amount of time (in milliseconds).
-    """
-    from Actions.Images import loadAndScaleImage
     from Actions.GameActions import gameIsRunning
 
     # init pygame
@@ -40,23 +46,18 @@ def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
 
     # scale the player image to the desired size (New width and height)
     ballSize: int = 35
+    ballStep: int = int(ballSize / 2)
     playerSize: int = 55
     playerSteps: int = 2
 
     # create a screen (width, height)
     screen = pygame.display.set_mode((screenWidth, screenHeight))
 
-    # load and scale images
-    backgroundImg = loadAndScaleImage(
-        "resources/SoccerFieldBackground2.jpg", screenWidth, screenHeight
-    )
-    soccerRobotImg = loadAndScaleImage(
-        "resources/SoccerRobotPlayer.png", playerSize, playerSize
-    )
-    ballImg = loadAndScaleImage("resources/Ball2.png", ballSize, ballSize)
-
     # objects
-    soccerField = SoccerField(0, screenWidth, screenHeight, 1, ballSize)
+    soccerField = SoccerField(
+        0, screenWidth, screenHeight, 15, "resources/SoccerFieldBackground2.jpg"
+    )
+    ball = Ball(ballSize, ballStep, "resources/Ball2.png", soccerField)
     soccerRobot1 = SoccerRobot(
         1,
         1,
@@ -64,6 +65,7 @@ def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
         playerSteps,
         int(screenWidth * 0.82),
         int(screenHeight / 2.15),
+        "resources/SoccerRobotPlayer.png",
         soccerField,
     )
     soccerRobot2 = SoccerRobot(
@@ -73,6 +75,7 @@ def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
         playerSteps,
         int(screenWidth * 0.1),
         int(screenHeight / 2.15),
+        "resources/SoccerRobotPlayer.png",
         soccerField,
     )
     soccerField.players.append(soccerRobot1)
@@ -96,20 +99,12 @@ def runSimulation(runForDuration:bool = False, durationInMs: int= 0):
                 running = False
 
         # all game logic is in here
-        gameIsRunning(
-            75,
-            screen,
-            soccerField,
-            soccerRobot1,
-            soccerRobot2,
-            soccerRobotImg,
-            ballImg,
-            backgroundImg,
-        )
+        gameIsRunning(75, screen, soccerField, ball, soccerRobot1, soccerRobot2)
         # Ensure the window gets updated
-        pygame.display.update()  
+        pygame.display.update()
 
     pygame.quit()
+
 
 # "main" function, all objects are defined here
 if __name__ == "__main__":

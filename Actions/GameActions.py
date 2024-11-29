@@ -7,6 +7,7 @@ import random
 import pygame
 
 
+from Classes import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
@@ -18,11 +19,9 @@ def gameIsRunning(
     fps: int,
     displayScreen: pygame.Surface,
     field: SoccerField,
+    ball: Ball,
     player1: SoccerRobot,
     player2: SoccerRobot,
-    playerImg: pygame.image,
-    ballImg: pygame.image,
-    backgroundImg: pygame.image,
 ):
     """!
     @brief Executes the game logic, updating the game state.
@@ -56,13 +55,13 @@ def gameIsRunning(
 
     ################# DRAWING ##################
     # draw the background image
-    displayScreen.blit(backgroundImg, (0, 0))
+    displayScreen.blit(field.image, (0, 0))
 
     # draw the ball and assign rectangle to it
-    ballRect = drawBall(displayScreen, field, ballImg)
+    ballRect = drawBall(displayScreen, field, ball.image)
 
     # playerRectangles for collision detection
-    playerRectangles = drawAllPlayers(displayScreen, field, playerImg)
+    playerRectangles = drawAllPlayers(displayScreen, field, player1.image)
 
     ################# KEYS #################
     # get the key that are currently pressed
@@ -78,7 +77,7 @@ def gameIsRunning(
 
     # random choice for movement for player2
     randomMove = random.choice(Const.allBasicDirections)
-    player2.move(randomMove, player2.playerSteps)
+    player2.move(randomMove, player2.step)
 
     # Update the display
     pygame.display.flip()

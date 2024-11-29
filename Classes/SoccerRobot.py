@@ -3,6 +3,8 @@
 @brief class for SoccerRobot (main-actor on Soccerfield)
 """
 
+import pygame
+from Actions.Images import loadAndScaleImage
 from Classes.SoccerField import SoccerField
 from Constants import Const
 
@@ -16,10 +18,11 @@ class SoccerRobot:
         self,
         id: int,
         team: int,
-        playerSize: int,
-        playerSteps: float,
+        size: int,
+        step: float,
         positionX: int,
         positionY: int,
+        imagePath: str,
         field: SoccerField,
     ):
         """!
@@ -32,8 +35,8 @@ class SoccerRobot:
         self.team: int = team
         self.positionX: int = positionX
         self.positionY: int = positionY
-        self.playerSize: int = playerSize
-        self.playerSteps: float = playerSteps
+        self.size: int = size
+        self.step: float = step
         self.status: int = 0
         self.currentDirection: int = None
         self.speed: float = 0
@@ -42,7 +45,12 @@ class SoccerRobot:
         self.collision: bool = False
         self.field: SoccerField = field
 
-    def move(self, direction: int, step: float):
+        # create the rectangle object
+        self.rectangle = pygame.Rect(self.positionX, self.positionY, size, size)
+        # load image for rectangle
+        self.image = loadAndScaleImage(imagePath, self.size, self.size)
+
+    def move(self, direction: int):
         """!
         @brief moves the x or y position of the robot on the field
 
@@ -51,25 +59,20 @@ class SoccerRobot:
 
         @return void This function does not return a value.
         """
-        margin = 20
         match direction:
             case Const.NORTH_DIRECTION:
-                if self.positionY > margin:
-                    self.positionY -= step
+                if self.positionY > Const.OUTER_MARGIN:
+                    self.positionY -= self.step
             case Const.EAST_DIRECTION:
-                if self.positionX < (self.field.width - self.playerSize - margin):
-                    self.positionX += step
+                if self.positionX < (self.field.width - self.size - Const.OUTER_MARGIN):
+                    self.positionX += self.step
             case Const.SOUTH_DIRECTION:
-                if self.positionY < (self.field.height - self.playerSize - margin):
-                    self.positionY += step
+                if self.positionY < (
+                    self.field.height - self.size - Const.OUTER_MARGIN
+                ):
+                    self.positionY += self.step
             case Const.WEST_DIRECTION:
-                if self.positionX > margin:
-                    self.positionX -= step
+                if self.positionX > Const.OUTER_MARGIN:
+                    self.positionX -= self.step
             case _:
                 pass
-
-    def shootBall(self):
-        pass
-
-    def orientation(self):
-        pass
