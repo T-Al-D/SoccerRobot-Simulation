@@ -4,14 +4,14 @@
 """
 
 import pytest
-from tests import alternateMain
+from main import runSimulation
 
 
 # Run this test for a certain amount of ms
 @pytest.mark.parametrize("durationInMs", [2500])
-def test_runAlternateMainForDuration(durationInMs):
+def test_runSimulationForDuration(durationInMs):
     try:
-        alternateMain.runAlternateMainForDuration(durationInMs)
+        runSimulation(True, durationInMs)
         # If the function completes successfully, the game loop ran for the specified time
         assert True  # Just check that the function runs without crashing
     except Exception as e:

@@ -9,8 +9,10 @@ import os
 import pygame
 
 # classes from the folders
+from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
+from Constants.Const import OUTER_PADDING, TOP_MARGIN, Y_DIVISOR
 
 # pygame sound not use real sound hardware
 os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
@@ -18,13 +20,17 @@ os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
 # get clock for pygame (defined as a global variable)
 clock = pygame.time.Clock()
 
+
 # "main" function, all objects are defined here
-if __name__ == "__main__":
+def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
     """!
-    @brief Initializes all needed information for the programm/simulation
-    simulation runs in endless while-loop, until exit
+    @brief executes the logic, can me run for limited time (in tests)
+
+    @param runForDuration tells the function if it has to run for limited time
+    @param durationInMs int value for amount of ms
+
+    @return void This function does not return a value.
     """
-    from Actions.Images import loadAndScaleImage
     from Actions.GameActions import gameIsRunning
 
     # init pygame
@@ -37,34 +43,39 @@ if __name__ == "__main__":
 
     # window size
     screenWidth: int = 800
-    screenHeight: int = 600
+    screenHeight: int = 650
+    internalHeight: int = screenHeight - TOP_MARGIN - OUTER_PADDING
 
     # scale the player image to the desired size (New width and height)
     ballSize: int = 35
+    ballStep: int = int(ballSize / 2)
     playerSize: int = 55
     playerSteps: int = 2
 
     # create a screen (width, height)
-    screen = pygame.display.set_mode((screenWidth, screenHeight))
+    screen = pygame.display.set_mode((screenWidth, internalHeight))
 
-    # load and scale images
-    backgroundImg = loadAndScaleImage(
-        "resources/SoccerFieldBackground2.jpg", screenWidth, screenHeight
+    # field
+    soccerField = SoccerField(
+        0,
+        screenWidth,
+        internalHeight - TOP_MARGIN,
+        15,
+        "resources/SoccerFieldBackground2.jpg",
     )
-    soccerRobotImg = loadAndScaleImage(
-        "resources/SoccerRobotPlayer.png", playerSize, playerSize
-    )
-    ballImg = loadAndScaleImage("resources/Ball2.png", ballSize, ballSize)
 
-    # objects
-    soccerField = SoccerField(0, screenWidth, screenHeight, 1, ballSize)
+    # ball
+    ball = Ball(ballSize, ballStep, "resources/Ball2.png", soccerField)
+
+    # soccerRobots
     soccerRobot1 = SoccerRobot(
         1,
         1,
         playerSize,
         playerSteps,
         int(screenWidth * 0.82),
-        int(screenHeight / 2.15),
+        int((internalHeight) / Y_DIVISOR),
+        "resources/SoccerRobotPlayer.png",
         soccerField,
     )
     soccerRobot2 = SoccerRobot(
@@ -73,7 +84,8 @@ if __name__ == "__main__":
         playerSize,
         playerSteps,
         int(screenWidth * 0.1),
-        int(screenHeight / 2.15),
+        int((internalHeight) / Y_DIVISOR),
+        "resources/SoccerRobotPlayer.png",
         soccerField,
     )
     soccerField.players.append(soccerRobot1)
@@ -81,24 +93,35 @@ if __name__ == "__main__":
 
     # if the value of running is changed, the application stops
     running: bool = True
+    # Track when the loop starts
+    startTicks = pygame.time.get_ticks()
+
     while running:
+        # if we only want to run our simulation for a short time during the tests
+        if runForDuration is True:
+            # if we've run for the duration time, stop
+            if (pygame.time.get_ticks() - startTicks) >= durationInMs:
+                running = False
+
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
 
         # all game logic is in here
-        gameIsRunning(
-            75,
-            screen,
-            soccerField,
-            soccerRobot1,
-            soccerRobot2,
-            soccerRobotImg,
-            ballImg,
-            backgroundImg,
-        )
+        gameIsRunning(75, screen, soccerField, ball, soccerRobot1, soccerRobot2)
+        # Ensure the window gets updated
+        pygame.display.update()
 
-    # quit programm / pygame
     pygame.quit()
+
+
+# "main" function, all objects are defined here
+# https://stackoverflow.com/questions/71576307/how-can-i-generate-getter-and-setter-in-vscode-python-automatically-for-private
+if __name__ == "__main__":
+    """!
+    @brief Initializes all needed information for the programm/simulation
+    simulation runs in endless while-loop, until exit
+    """
+    runSimulation()
     sys.exit()
