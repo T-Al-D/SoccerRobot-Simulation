@@ -97,13 +97,13 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5c19b010874e48d489a325eaf9fdbfea" id="r_a5c19b010874e48d489a325eaf9fdbfea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c19b010874e48d489a325eaf9fdbfea">gameIsRunning</a> (int fps, pygame.Surface displayScreen, <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a> field, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player1, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player2, pygame.image playerImg, pygame.image ballImg, pygame.image backgroundImg)</td></tr>
-<tr class="memdesc:a5c19b010874e48d489a325eaf9fdbfea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the game logic, updating the game state.  <br /></td></tr>
-<tr class="separator:a5c19b010874e48d489a325eaf9fdbfea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c544984b2613df6ede39ecfae27a4cf" id="r_a0c544984b2613df6ede39ecfae27a4cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c544984b2613df6ede39ecfae27a4cf">gameIsRunning</a> (int fps, pygame.Surface displayScreen, <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a> field, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player1, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player2)</td></tr>
+<tr class="memdesc:a0c544984b2613df6ede39ecfae27a4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the game logic, updating the game state.  <br /></td></tr>
+<tr class="separator:a0c544984b2613df6ede39ecfae27a4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5c19b010874e48d489a325eaf9fdbfea" name="a5c19b010874e48d489a325eaf9fdbfea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c19b010874e48d489a325eaf9fdbfea">&#9670;&#160;</a></span>gameIsRunning()</h2>
+<a id="a0c544984b2613df6ede39ecfae27a4cf" name="a0c544984b2613df6ede39ecfae27a4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c544984b2613df6ede39ecfae27a4cf">&#9670;&#160;</a></span>gameIsRunning()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,27 +126,17 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a></td>          <td class="paramname"><span class="paramname"><em>ball</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a></td>          <td class="paramname"><span class="paramname"><em>player1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a></td>          <td class="paramname"><span class="paramname"><em>player2</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">pygame.image</td>          <td class="paramname"><span class="paramname"><em>playerImg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">pygame.image</td>          <td class="paramname"><span class="paramname"><em>ballImg</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">pygame.image</td>          <td class="paramname"><span class="paramname"><em>backgroundImg</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a></td>          <td class="paramname"><span class="paramname"><em>player2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,11 +148,9 @@ Functions</h2></td></tr>
     <tr><td class="paramname">fps</td><td>frame rate limit </td></tr>
     <tr><td class="paramname">displayScreen</td><td>the screen where everything is shown </td></tr>
     <tr><td class="paramname">field</td><td>The <code>SoccerField</code> object representing the game/simulation field. </td></tr>
+    <tr><td class="paramname">ball</td><td>the ball object </td></tr>
     <tr><td class="paramname">player1</td><td>The <code>SoccerRobot</code> object representing the first player. </td></tr>
-    <tr><td class="paramname">player2</td><td>The <code>SoccerRobot</code> object representing the second player. </td></tr>
-    <tr><td class="paramname">playerImg</td><td>image for player rectangangle </td></tr>
-    <tr><td class="paramname">ballImg</td><td>image for ball rectangangle </td></tr>
-    <tr><td class="paramname">backgroundImg</td><td>image for background (displyed behind all the other elements)</td></tr>
+    <tr><td class="paramname">player2</td><td>The <code>SoccerRobot</code> object representing the second player.</td></tr>
   </table>
   </dd>
 </dl>
