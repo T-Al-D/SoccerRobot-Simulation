@@ -3,7 +3,6 @@ import pygame
 from Classes.SoccerField import SoccerField
 from Constants import Const
 
-
 goal_counter = 0
 
 def checkBallPosition(ballRect: pygame.Rect, goal_counter: int):
