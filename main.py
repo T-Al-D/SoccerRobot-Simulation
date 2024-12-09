@@ -12,6 +12,7 @@ import pygame
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
+from Constants.Const import OUTER_PADDING, TOP_MARGIN, Y_DIVISOR
 
 # pygame sound not use real sound hardware
 os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disables audio
@@ -42,7 +43,8 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
     # window size
     screenWidth: int = 800
-    screenHeight: int = 600
+    screenHeight: int = 650
+    internalHeight: int = screenHeight - TOP_MARGIN - OUTER_PADDING
 
     # scale the player image to the desired size (New width and height)
     ballSize: int = 35
@@ -51,20 +53,28 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
     playerSteps: int = 2
 
     # create a screen (width, height)
-    screen = pygame.display.set_mode((screenWidth, screenHeight))
+    screen = pygame.display.set_mode((screenWidth, internalHeight))
 
-    # objects
+    # field
     soccerField = SoccerField(
-        0, screenWidth, screenHeight, 15, "resources/SoccerFieldBackground2.jpg"
+        0,
+        screenWidth,
+        internalHeight - TOP_MARGIN,
+        15,
+        "resources/SoccerFieldBackground2.jpg",
     )
+
+    # ball
     ball = Ball(ballSize, ballStep, "resources/Ball2.png", soccerField)
+
+    # soccerRobots
     soccerRobot1 = SoccerRobot(
         1,
         1,
         playerSize,
         playerSteps,
         int(screenWidth * 0.82),
-        int(screenHeight / 2.15),
+        int((internalHeight) / Y_DIVISOR),
         "resources/SoccerRobotPlayer.png",
         soccerField,
     )
@@ -74,7 +84,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         playerSize,
         playerSteps,
         int(screenWidth * 0.1),
-        int(screenHeight / 2.15),
+        int((internalHeight) / Y_DIVISOR),
         "resources/SoccerRobotPlayer.png",
         soccerField,
     )
@@ -107,6 +117,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
 
 # "main" function, all objects are defined here
+# https://stackoverflow.com/questions/71576307/how-can-i-generate-getter-and-setter-in-vscode-python-automatically-for-private
 if __name__ == "__main__":
     """!
     @brief Initializes all needed information for the programm/simulation

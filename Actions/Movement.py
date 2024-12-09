@@ -4,6 +4,7 @@
 """
 
 import pygame
+from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
@@ -20,30 +21,29 @@ def playerMovement(keys: pygame.key, player: SoccerRobot):
     @return void This function does not return a value.
     """
     if keys[pygame.K_LEFT]:
-        player.move(Const.WEST_DIRECTION, player.playerSteps)
+        player.move(Const.WEST_DIRECTION)
     elif keys[pygame.K_RIGHT]:
-        player.move(Const.EAST_DIRECTION, player.playerSteps)
+        player.move(Const.EAST_DIRECTION)
     elif keys[pygame.K_UP]:
-        player.move(Const.NORTH_DIRECTION, player.playerSteps)
+        player.move(Const.NORTH_DIRECTION)
     elif keys[pygame.K_DOWN]:
-        player.move(Const.SOUTH_DIRECTION, player.playerSteps)
+        player.move(Const.SOUTH_DIRECTION)
 
 
-def ballMovement(keys: pygame.key, field: SoccerField, ballSteps: int):
+def ballMovement(keys: pygame.key, ball: Ball):
     """!
     @brief ball movements depending on what key is pressed
 
     @param keys the key events that got pressed
-    @param field the ball is part of field (Soccerfield)
-    @param ballSteps the steps in which the ball gets moved
+    @param ball the ball Object
 
     @return void This function does not return a value.
     """
     if keys[pygame.K_LEFT]:
-        field.moveBall(Const.WEST_DIRECTION, ballSteps)
+        ball.move(Const.WEST_DIRECTION)
     elif keys[pygame.K_RIGHT]:
-        field.moveBall(Const.EAST_DIRECTION, ballSteps)
+        ball.move(Const.EAST_DIRECTION)
     elif keys[pygame.K_UP]:
-        field.moveBall(Const.NORTH_DIRECTION, ballSteps)
+        ball.move(Const.NORTH_DIRECTION)
     elif keys[pygame.K_DOWN]:
-        field.moveBall(Const.SOUTH_DIRECTION, ballSteps)
+        ball.move(Const.SOUTH_DIRECTION)

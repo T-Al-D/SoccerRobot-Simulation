@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['drawallplayers_0',['drawAllPlayers',['../namespace_actions_1_1_drawing.html#abcbc05954e160fc2ab06e01171ff4fad',1,'Actions::Drawing']]],
-  ['drawball_1',['drawBall',['../namespace_actions_1_1_drawing.html#a984fbe53290c9dde09bb2e6458d363d5',1,'Actions::Drawing']]],
-  ['drawplayer_2',['drawPlayer',['../namespace_actions_1_1_drawing.html#afd7913481dbbf0e6a92b3e790a1f5442',1,'Actions::Drawing']]]
+  ['drawallplayers_0',['drawAllPlayers',['../namespace_actions_1_1_drawing.html#a9ea685d516be795d8b449705a02439e4',1,'Actions::Drawing']]],
+  ['drawrectangleonscreen_1',['drawRectangleOnScreen',['../namespace_actions_1_1_drawing.html#addbd524e1823265ccba855554c75095f',1,'Actions::Drawing']]]
 ];

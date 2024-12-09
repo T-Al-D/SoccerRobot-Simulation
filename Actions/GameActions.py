@@ -7,7 +7,9 @@ import random
 import pygame
 
 
-from Classes import Ball
+from Actions.Collision import ballMovementsThroughPlayerCollision
+from Actions.Drawing import drawRectangleOnScreen
+from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
@@ -32,20 +34,16 @@ def gameIsRunning(
     @param fps frame rate limit
     @param displayScreen the screen where everything is shown
     @param field The `SoccerField` object representing the game/simulation field.
+    @param ball the ball object
     @param player1 The `SoccerRobot` object representing the first player.
     @param player2 The `SoccerRobot` object representing the second player.
-    @param playerImg image for player rectangangle
-    @param ballImg image for ball rectangangle
-    @param backgroundImg image for background (displyed behind all the other elements)
 
     @return void This function does not return a value.
     """
     # local import of functions (prevention of circular imports)
-    from Actions.Drawing import drawBall
     from Actions.Drawing import drawAllPlayers
     from Actions.Movement import playerMovement
     from Actions.Collision import playerCollideWithPlayer
-    from Actions.Collision import ballMovementsThroughCollision
 
     # Import the (global variable) clock from main.py
     from main import clock
@@ -54,22 +52,26 @@ def gameIsRunning(
     clock.tick(fps)
 
     ################# DRAWING ##################
-    # draw the background image
-    displayScreen.blit(field.image, (0, 0))
+    # "draw" the label on screen
+    # labelImage =
+    # displayScreen.blit(labelImage, (0, 0))
+
+    # draw the background image , leaving out the top - margin for the label
+    displayScreen.blit(field.image, (0, Const.TOP_MARGIN))
 
     # draw the ball and assign rectangle to it
-    ballRect = drawBall(displayScreen, field, ball.image)
+    drawRectangleOnScreen(displayScreen, ball.rectangle, ball.image)
 
     # playerRectangles for collision detection
-    playerRectangles = drawAllPlayers(displayScreen, field, player1.image)
+    drawAllPlayers(displayScreen, field.players)
 
     ################# KEYS #################
     # get the key that are currently pressed
     keys = pygame.key.get_pressed()
 
     ################# COLLISION ################
-    ballMovementsThroughCollision(keys, playerRectangles, ballRect, field)
-    playerCollideWithPlayer(keys, playerRectangles)
+    ballMovementsThroughPlayerCollision(keys, field.players, ball)
+    # playerCollideWithPlayer(keys, playerRectangles)
 
     ################# MOVEMENT #################
     # movement for player1 (soccerRobots)
@@ -77,7 +79,7 @@ def gameIsRunning(
 
     # random choice for movement for player2
     randomMove = random.choice(Const.allBasicDirections)
-    player2.move(randomMove, player2.step)
+    player2.move(randomMove)
 
     # Update the display
     pygame.display.flip()

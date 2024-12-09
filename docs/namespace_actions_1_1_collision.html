@@ -97,39 +97,35 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a04d492868b519d204ec07e6ae282f17f" id="r_a04d492868b519d204ec07e6ae282f17f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d492868b519d204ec07e6ae282f17f">ballMovementsThroughCollision</a> (pygame.key keys, pygame.Rect playerRectangles, pygame.Rect ballRect, <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a> field)</td></tr>
-<tr class="memdesc:a04d492868b519d204ec07e6ae282f17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the ball depending on collision and ballMovements the player wants to kick the ball in front of him  <br /></td></tr>
-<tr class="separator:a04d492868b519d204ec07e6ae282f17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba2b63134ead12a77b4f7934fbaa4d6" id="r_aaba2b63134ead12a77b4f7934fbaa4d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaba2b63134ead12a77b4f7934fbaa4d6">ballMovementsThroughPlayerCollision</a> (pygame.key keys, list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] players, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
+<tr class="memdesc:aaba2b63134ead12a77b4f7934fbaa4d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the ball depending on collision and ballMovements the player wants to kick the ball in front of him  <br /></td></tr>
+<tr class="separator:aaba2b63134ead12a77b4f7934fbaa4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3976a60da30cbfbf6f6ccc2f2031daa6" id="r_a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3976a60da30cbfbf6f6ccc2f2031daa6">playerCollideWithPlayer</a> (pygame.key keys, pygame.Rect playerRectangles)</td></tr>
 <tr class="memdesc:a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">prevention of players walking 'over' each other if players collide, they are not allowed to cross each other  <br /></td></tr>
 <tr class="separator:a3976a60da30cbfbf6f6ccc2f2031daa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a04d492868b519d204ec07e6ae282f17f" name="a04d492868b519d204ec07e6ae282f17f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04d492868b519d204ec07e6ae282f17f">&#9670;&#160;</a></span>ballMovementsThroughCollision()</h2>
+<a id="aaba2b63134ead12a77b4f7934fbaa4d6" name="aaba2b63134ead12a77b4f7934fbaa4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba2b63134ead12a77b4f7934fbaa4d6">&#9670;&#160;</a></span>ballMovementsThroughPlayerCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Actions.Collision.ballMovementsThroughCollision </td>
+          <td class="memname">Actions.Collision.ballMovementsThroughPlayerCollision </td>
           <td>(</td>
           <td class="paramtype">pygame.key</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pygame.Rect</td>          <td class="paramname"><span class="paramname"><em>playerRectangles</em></span>, </td>
+          <td class="paramtype">list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>]</td>          <td class="paramname"><span class="paramname"><em>players</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pygame.Rect</td>          <td class="paramname"><span class="paramname"><em>ballRect</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a></td>          <td class="paramname"><span class="paramname"><em>field</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a>
+</td>          <td class="paramname"><span class="paramname"><em>ball</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -138,9 +134,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">keys</td><td>the key events that got pressed </td></tr>
-    <tr><td class="paramname">playerRectangles</td><td>array with player reactangles to check for collision </td></tr>
-    <tr><td class="paramname">ballRect</td><td>the rectangle which gets checked for collision </td></tr>
-    <tr><td class="paramname">field</td><td>needed later on to chenge the position of the ball</td></tr>
+    <tr><td class="paramname">players</td><td>list of SoccerRobots to check for collision </td></tr>
+    <tr><td class="paramname">ball</td><td>the ball Object to be moved</td></tr>
   </table>
   </dd>
 </dl>

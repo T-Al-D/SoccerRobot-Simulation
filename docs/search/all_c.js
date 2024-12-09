@@ -4,7 +4,6 @@ var searchData=
   ['main_2epy_1',['main.py',['../main_8py.html',1,'']]],
   ['mentionofsources_2emd_2',['MentionOfSources.md',['../_mention_of_sources_8md.html',1,'']]],
   ['message_3',['message',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ad0b71c64ca606abacd5a1b2dc099b230',1,'Classes::SoccerRobot::SoccerRobot']]],
-  ['move_4',['move',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a1a2bf0de20ab4574db718a917be6da6f',1,'Classes::SoccerRobot::SoccerRobot']]],
-  ['moveball_5',['moveBall',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#adeee9f737f8f837b6e80bf765b5ebb58',1,'Classes::SoccerField::SoccerField']]],
-  ['movement_2epy_6',['Movement.py',['../_movement_8py.html',1,'']]]
+  ['move_4',['move',['../class_classes_1_1_ball_1_1_ball.html#aa83e8b769df18e3fb85bf85c687c8b70',1,'Classes.Ball.Ball.move()'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a1ea8d88fb8190d78032a2892ac131626',1,'Classes.SoccerRobot.SoccerRobot.move()']]],
+  ['movement_2epy_5',['Movement.py',['../_movement_8py.html',1,'']]]
 ];

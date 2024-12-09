@@ -53,26 +53,30 @@ class SoccerRobot:
     def move(self, direction: int):
         """!
         @brief moves the x or y position of the robot on the field
+        after that it sets the internal rectangle
 
         @param direction the direction in which the robot should be moved
-        @param step in what steps should the robot be moved
 
         @return void This function does not return a value.
         """
         match direction:
             case Const.NORTH_DIRECTION:
-                if self.positionY > Const.OUTER_MARGIN:
+                if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
                     self.positionY -= self.step
             case Const.EAST_DIRECTION:
-                if self.positionX < (self.field.width - self.size - Const.OUTER_MARGIN):
+                if self.positionX < (
+                    self.field.width - self.size - Const.OUTER_PADDING
+                ):
                     self.positionX += self.step
             case Const.SOUTH_DIRECTION:
-                if self.positionY < (
-                    self.field.height - self.size - Const.OUTER_MARGIN
-                ):
+                if self.positionY < (self.field.height - Const.OUTER_PADDING - 5):
                     self.positionY += self.step
             case Const.WEST_DIRECTION:
-                if self.positionX > Const.OUTER_MARGIN:
+                if self.positionX > Const.OUTER_PADDING:
                     self.positionX -= self.step
             case _:
                 pass
+
+        # after each change of x or y, set the internal rectangle
+        self.rectangle.x = self.positionX
+        self.rectangle.y = self.positionY

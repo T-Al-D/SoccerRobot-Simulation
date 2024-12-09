@@ -3,6 +3,7 @@
 @brief class for SoccerField (main action on Soccerfield)
 """
 
+import pygame
 from Actions.Images import loadAndScaleImage
 from Constants import Const
 
@@ -14,9 +15,9 @@ class SoccerField:
 
     def __init__(
         self,
+        status: int,
         width: int,
         height: int,
-        status: int,
         playTimeInMinutes: int,
         imagePath: str,
     ):
