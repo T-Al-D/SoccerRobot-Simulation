@@ -69,13 +69,13 @@ def gameIsRunning(
     # get the key that are currently pressed
     keys = pygame.key.get_pressed()
 
-    ################# COLLISION ################
-    ballMovementsThroughPlayerCollision(keys, field.players, ball)
-    # playerCollideWithPlayer(keys, playerRectangles)
-
     ################# MOVEMENT #################
     # movement for player1 (soccerRobots)
     playerMovement(keys, player1)
+
+    ################# COLLISION ################
+    ballMovementsThroughPlayerCollision(keys, field.players, ball)
+    playerCollideWithPlayer(keys, field.players)
 
     # random choice for movement for player2
     randomMove = random.choice(Const.allBasicDirections)

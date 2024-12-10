@@ -48,7 +48,7 @@ class SoccerRobot:
         # load image for rectangle
         self.image = loadAndScaleImage(imagePath, self.size, self.size)
 
-    def move(self, direction: int):
+    def move(self, direction: int, extraSteps: float = 1.0):
         """!
         @brief moves the x or y position of the robot on the field
         after that it sets the internal rectangle
@@ -60,18 +60,18 @@ class SoccerRobot:
         match direction:
             case Const.NORTH_DIRECTION:
                 if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
-                    self.positionY -= self.step
+                    self.positionY -= int(self.step * extraSteps)
             case Const.EAST_DIRECTION:
                 if self.positionX < (
                     self.field.width - self.size - Const.OUTER_PADDING
                 ):
-                    self.positionX += self.step
+                    self.positionX += self.step * extraSteps
             case Const.SOUTH_DIRECTION:
                 if self.positionY < (self.field.height - Const.OUTER_PADDING - 5):
-                    self.positionY += self.step
+                    self.positionY += int(self.step * extraSteps)
             case Const.WEST_DIRECTION:
                 if self.positionX > Const.OUTER_PADDING:
-                    self.positionX -= self.step
+                    self.positionX -= int(self.step * extraSteps)
             case _:
                 pass
 
