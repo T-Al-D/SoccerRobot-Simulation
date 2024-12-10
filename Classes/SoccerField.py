@@ -3,7 +3,6 @@
 @brief class for SoccerField (main action on Soccerfield)
 """
 
-import pygame
 from Actions.Images import loadAndScaleImage
 from Constants import Const
 
@@ -27,7 +26,7 @@ class SoccerField:
         """
         # prevention of circular imports
         from Classes.SoccerRobot import SoccerRobot
-        from Classes import Ball
+        from Classes.Ball import Ball
 
         self.status: int = status
         self.width: int = width
@@ -55,3 +54,14 @@ class SoccerField:
 
     def endGame(self):
         pass
+
+    # A possible way to create getters and setters the python way
+    """
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, value):
+        self._width = value
+    """
