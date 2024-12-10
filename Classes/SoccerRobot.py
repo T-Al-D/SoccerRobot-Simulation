@@ -29,8 +29,6 @@ class SoccerRobot:
         @brief Constructor for SoccerRobot class.
         Initializes the most necessary data
         """
-        from Classes.SoccerField import SoccerField  # prevention of circular imports
-
         self.id: int = id
         self.team: int = team
         self.positionX: int = positionX
