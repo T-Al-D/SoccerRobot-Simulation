@@ -129,7 +129,7 @@ class SoccerField:
 
     @image.setter
     def image(self, value):
-        self._image = value
+        self._image: pygame.image = value
 
     def returnTeamScore(self):
         return [self._team1Score, self._team2Score]
