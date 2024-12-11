@@ -16,20 +16,84 @@ class Ball:
     """
 
     def __init__(self, size: int, step: int, imagePath: str, field: SoccerField):
-        self.size: int = size
-        self.step: int = step
-        self.field: SoccerField = field
-        self.positionX: int = int(field.width / 2.07)
-        self.positionY: int = int(
+        self._size: int = size
+        self._step: int = step
+        self._field: SoccerField = field
+        self._positionX: int = int(field.width / 2.07)
+        self._positionY: int = int(
             (field.height - Const.TOP_MARGIN) / (Const.Y_DIVISOR - 0.3)
         )
-        self.ballStatus: int = 0
-        self.field.ball = self
+        self._ballStatus: int = 0
+        self._field.ball = self
 
         # create the rectangle object
-        self.rectangle = pygame.Rect(self.positionX, self.positionY, size, size)
+        self._rectangle = pygame.Rect(self._positionX, self._positionY, size, size)
         # load image for rectangle
-        self.image = loadAndScaleImage(imagePath, self.size, self.size)
+        self._image: pygame.image = loadAndScaleImage(imagePath, self._size, self._size)
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, value: int):
+        self._size = value
+
+    @property
+    def step(self):
+        return self._step
+
+    @step.setter
+    def step(self, value: int):
+        self._step = value
+
+    @property
+    def field(self):
+        return self._field
+
+    @field.setter
+    def field(self, value):
+        self._field: SoccerField = value
+
+    @property
+    def positionX(self):
+        return self._positionX
+
+    @positionX.setter
+    def positionX(self, value: int):
+        self._positionX = value
+
+    @property
+    def positionY(self):
+        return self._positionY
+
+    @positionY.setter
+    def positionY(self, value: int):
+        self._positionY = value
+
+    @property
+    def ballStatus(self):
+        return self._ballStatus
+
+    @ballStatus.setter
+    def ballStatus(self, value: int):
+        self._ballStatus = value
+
+    @property
+    def rectangle(self):
+        return self._rectangle
+
+    @rectangle.setter
+    def rectangle(self, value):
+        self._rectangle: pygame.Rect = value
+
+    @property
+    def image(self):
+        return self._image
+
+    @image.setter
+    def image(self, value):
+        self._image: pygame.image = value
 
     def move(self, direction: int):
         """!

@@ -105,9 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4620632368fb0f37b4fff8360caad9b" id="r_ab4620632368fb0f37b4fff8360caad9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4620632368fb0f37b4fff8360caad9b">__init__</a> (self, int <a class="el" href="#a455b8cef653fd64228f5c7098576ca5c">id</a>, int <a class="el" href="#a41e510c44c39cf12955545d749cdad08">team</a>, int <a class="el" href="#ac53481b4012537357b18cc86589e0a86">size</a>, float <a class="el" href="#a562dad03e09856b672e53f2ca85a4dc0">step</a>, int <a class="el" href="#a49ac907876b6a704e02c6c301997edfb">positionX</a>, int <a class="el" href="#aa86ff77a9e6e2f0e2df6d8be158bbbc4">positionY</a>, str imagePath, <a class="el" href="class_classes_1_1_soccer_field_1_1_soccer_field.html">SoccerField</a> <a class="el" href="#adcafb06aa285e918099beea713ed5663">field</a>)</td></tr>
 <tr class="memdesc:ab4620632368fb0f37b4fff8360caad9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html" title="SoccerRobots kick the ball on the field (main-actors on the field)">SoccerRobot</a> class.  <br /></td></tr>
 <tr class="separator:ab4620632368fb0f37b4fff8360caad9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ea8d88fb8190d78032a2892ac131626" id="r_a1ea8d88fb8190d78032a2892ac131626"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ea8d88fb8190d78032a2892ac131626">move</a> (self, int direction)</td></tr>
-<tr class="memdesc:a1ea8d88fb8190d78032a2892ac131626"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the x or y position of the robot on the field after that it sets the internal rectangle  <br /></td></tr>
-<tr class="separator:a1ea8d88fb8190d78032a2892ac131626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9087aa85b71fc57eecfb12819631162" id="r_ad9087aa85b71fc57eecfb12819631162"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9087aa85b71fc57eecfb12819631162">move</a> (self, int direction, float extraSteps=1.0)</td></tr>
+<tr class="memdesc:ad9087aa85b71fc57eecfb12819631162"><td class="mdescLeft">&#160;</td><td class="mdescRight">moves the x or y position of the robot on the field after that it sets the internal rectangle  <br /></td></tr>
+<tr class="separator:ad9087aa85b71fc57eecfb12819631162"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -205,8 +205,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ea8d88fb8190d78032a2892ac131626" name="a1ea8d88fb8190d78032a2892ac131626"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea8d88fb8190d78032a2892ac131626">&#9670;&#160;</a></span>move()</h2>
+<a id="ad9087aa85b71fc57eecfb12819631162" name="ad9087aa85b71fc57eecfb12819631162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9087aa85b71fc57eecfb12819631162">&#9670;&#160;</a></span>move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +219,12 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float </td>          <td class="paramname"><span class="paramname"><em>extraSteps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

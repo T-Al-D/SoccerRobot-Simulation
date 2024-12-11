@@ -6,8 +6,10 @@
 import random
 import pygame
 
-
-from Actions.Collision import ballMovementsThroughPlayerCollision
+from Actions.Collision import (
+    ballMovementsThroughPlayerCollision,
+    playerCollideWithPlayer,
+)
 from Actions.Drawing import drawRectangleOnScreen
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
@@ -43,7 +45,6 @@ def gameIsRunning(
     # local import of functions (prevention of circular imports)
     from Actions.Drawing import drawAllPlayers
     from Actions.Movement import playerMovement
-    from Actions.Collision import playerCollideWithPlayer
 
     # Import the (global variable) clock from main.py
     from main import clock
@@ -69,17 +70,22 @@ def gameIsRunning(
     # get the key that are currently pressed
     keys = pygame.key.get_pressed()
 
-    ################# COLLISION ################
-    ballMovementsThroughPlayerCollision(keys, field.players, ball)
-    # playerCollideWithPlayer(keys, playerRectangles)
-
     ################# MOVEMENT #################
     # movement for player1 (soccerRobots)
     playerMovement(keys, player1)
-
     # random choice for movement for player2
-    randomMove = random.choice(Const.allBasicDirections)
+    randomMove = random.choice(Const.ALL_BASIC_DIRECTION)
     player2.move(randomMove)
+
+    ################# COLLISION ################
+    # check collision with ball
+    ballMovementsThroughPlayerCollision(keys, field.players, ball)
+    # check collision between players
+    playerCollideWithPlayer(keys, field.players)
+
+    ################# RESET #####################
+    for player in field.players:
+        player.resetDirection()
 
     # Update the display
     pygame.display.flip()
