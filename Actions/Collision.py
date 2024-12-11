@@ -6,9 +6,8 @@
 import pygame
 
 
-from Actions.Movement import playerToPlayerMove
+from Actions.Movement import playerCollideMove
 from Classes.Ball import Ball
-from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
@@ -49,19 +48,17 @@ def playerCollideWithPlayer(keys: pygame.key, players: list[SoccerRobot]):
 
     @return void This function does not return a value.
     """
+    # print(f"players {players}")
     # Loop through each player and check for collision with others
     for player in players:
-        # Save the original position before moving
-        originalPosX, originalPosY = player.positionX, player.positionY
-
         # Check for collision with other players
         for otherPlayer in players:
             # Don't check for collision with itself
             if player != otherPlayer:
                 # in case of collision, reset position of player
                 if player.rectangle.colliderect(otherPlayer.rectangle):
-                    print(f"player {player} and otherPlayer {otherPlayer}")
+                    # print(f"player {player} and otherPlayer {otherPlayer}")
                     # If collision detected, reset position to original one
-                    playerToPlayerMove(keys, player)
+                    playerCollideMove(keys, player)
                     # Exit the loop after correcting position
                     break

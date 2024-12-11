@@ -36,7 +36,7 @@ class SoccerRobot:
         self.size: int = size
         self.step: float = step
         self.status: int = 0
-        self.currentDirection: int = None
+        self.currentDirection: int = Const.STANDING_STILL
         self.speed: float = 0
         self.errorNotification: int = 0
         self.message: str = None
@@ -57,6 +57,7 @@ class SoccerRobot:
 
         @return void This function does not return a value.
         """
+        self.currentDirection = direction
         match direction:
             case Const.NORTH_DIRECTION:
                 if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
@@ -78,3 +79,6 @@ class SoccerRobot:
         # after each change of x or y, set the internal rectangle
         self.rectangle.x = self.positionX
         self.rectangle.y = self.positionY
+
+    def resetDirection(self):
+        self.currentDirection = Const.STANDING_STILL

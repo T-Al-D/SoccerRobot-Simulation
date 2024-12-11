@@ -30,7 +30,7 @@ def playerMovement(keys: pygame.key, player: SoccerRobot):
         player.move(Const.SOUTH_DIRECTION)
 
 
-def playerToPlayerMove(keys: pygame.key, player: SoccerRobot):
+def playerCollideMove(keys: pygame.key, player: SoccerRobot):
     """!
     @brief once a player has collided with another player, move the player in opposite direction
     to prevent a "walk over"
