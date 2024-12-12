@@ -38,7 +38,7 @@ def ballMovementsThroughPlayerCollision(
         ballMovement(keys, ball)
 
 
-def playerCollideWithPlayer(keys: pygame.key, players: list[SoccerRobot]):
+def playerCollideWithPlayer(players: list[SoccerRobot]):
     """!
     @brief prevention of players walking 'over' each other
     if players collide, they are not allowed to cross each other
@@ -59,6 +59,6 @@ def playerCollideWithPlayer(keys: pygame.key, players: list[SoccerRobot]):
                 if player.rectangle.colliderect(otherPlayer.rectangle):
                     # print(f"player {player} and otherPlayer {otherPlayer}")
                     # If collision detected, reset position to original one
-                    playerCollideMove(keys, player)
+                    playerCollideMove(player)
                     # Exit the loop after correcting position
                     break

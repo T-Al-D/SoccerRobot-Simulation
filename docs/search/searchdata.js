@@ -4,8 +4,8 @@ var indexSectionsWithContent =
   1: "bs",
   2: "acmr",
   3: "_bcdgimrs",
-  4: "_bcdeglmpr",
-  5: "abcefhimnoprstwy",
+  4: "_bcdefghilmprstw",
+  5: "_acenostwy",
   6: "s"
 };
 

@@ -19,6 +19,7 @@ class Ball:
         self._size: int = size
         self._step: int = step
         self._field: SoccerField = field
+        self._currentDirection: int = Const.STANDING_STILL
         self._positionX: int = int(field.width / 2.07)
         self._positionY: int = int(
             (field.height - Const.TOP_MARGIN) / (Const.Y_DIVISOR - 0.3)
@@ -54,6 +55,14 @@ class Ball:
     @field.setter
     def field(self, value):
         self._field: SoccerField = value
+    
+    @property
+    def currentDirection(self):
+        return self._currentDirection
+
+    @currentDirection.setter
+    def currentDirection(self, value : int):
+        self._currentDirection = value
 
     @property
     def positionX(self):
