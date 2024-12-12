@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ball_0',['ball',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a301bfe1474749c254018356945ce68c3',1,'Classes::SoccerField::SoccerField']]],
-  ['ballstatus_1',['ballStatus',['../class_classes_1_1_ball_1_1_ball.html#a02f1cd8f266c3eb3f33de12ae6079961',1,'Classes::Ball::Ball']]]
+  ['all_5fbasic_5farrowkeys_0',['ALL_BASIC_ARROWKEYS',['../namespace_constants_1_1_const.html#ac56b9b0a4aab5eae59fb7654ba421b02',1,'Constants::Const']]],
+  ['all_5fbasic_5fdirections_1',['ALL_BASIC_DIRECTIONS',['../namespace_constants_1_1_const.html#a225b2f31107a3a4a2f83ca175f841481',1,'Constants::Const']]]
 ];

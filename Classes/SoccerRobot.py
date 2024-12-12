@@ -168,17 +168,18 @@ class SoccerRobot:
     def image(self, value):
         self._image: pygame.image = value
 
-    def move(self, direction: int, extraSteps: float = 1.0):
+    def move(self, extraSteps: float = 1.0):
         """!
         @brief moves the x or y position of the robot on the field
         after that it sets the internal rectangle
 
-        @param direction the direction in which the robot should be moved
+        @param extraSteps make steps bigger or smaller than standard
 
         @return void This function does not return a value.
         """
-        self.currentDirection = direction
-        match direction:
+        # print(f"self.currentDirection {self.currentDirection}")
+        # self.currentDirection = direction
+        match self.currentDirection:
             case Const.NORTH_DIRECTION:
                 if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
                     self.positionY -= int(self.step * extraSteps)

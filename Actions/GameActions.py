@@ -11,6 +11,7 @@ from Actions.Collision import (
     playerCollideWithPlayer,
 )
 from Actions.Drawing import drawRectangleOnScreen
+from Actions.Movement import playerManualMove
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
@@ -72,16 +73,16 @@ def gameIsRunning(
 
     ################# MOVEMENT #################
     # movement for player1 (soccerRobots)
-    playerMovement(keys, player1)
+    playerManualMove(keys, player1)
     # random choice for movement for player2
-    randomMove = random.choice(Const.ALL_BASIC_DIRECTION)
-    player2.move(randomMove)
+    randomMove = random.choice(Const.ALL_BASIC_ARROWKEYS)
+    playerMovement(randomMove, player2)
 
     ################# COLLISION ################
     # check collision with ball
     ballMovementsThroughPlayerCollision(keys, field.players, ball)
     # check collision between players
-    playerCollideWithPlayer(keys, field.players)
+    playerCollideWithPlayer(field.players)
 
     ################# RESET #####################
     for player in field.players:

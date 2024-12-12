@@ -7,6 +7,7 @@ var searchData=
   ['actions_3a_3aimages_4',['Images',['../namespace_actions_1_1_images.html',1,'Actions']]],
   ['actions_3a_3amovement_5',['Movement',['../namespace_actions_1_1_movement.html',1,'Actions']]],
   ['al_20d_20github_20io_20soccerrobot_20simulation_6',['githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
-  ['allbasicdirections_7',['allBasicDirections',['../namespace_constants_1_1_const.html#a2c3bbc4845df7f82326782af454437b6',1,'Constants::Const']]],
-  ['and_20pyreverse_8',['Diagramms created with graphiz, code2flow and pyreverse',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
+  ['all_5fbasic_5farrowkeys_7',['ALL_BASIC_ARROWKEYS',['../namespace_constants_1_1_const.html#ac56b9b0a4aab5eae59fb7654ba421b02',1,'Constants::Const']]],
+  ['all_5fbasic_5fdirections_8',['ALL_BASIC_DIRECTIONS',['../namespace_constants_1_1_const.html#a225b2f31107a3a4a2f83ca175f841481',1,'Constants::Const']]],
+  ['and_20pyreverse_9',['Diagramms created with graphiz, code2flow and pyreverse',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
 ];
