@@ -12,14 +12,11 @@ from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
 
-def ballMovementsThroughPlayerCollision(
-    keys: pygame.key, players: list[SoccerRobot], ball: Ball
-):
+def ballMovementsThroughPlayerCollision(players: list[SoccerRobot], ball: Ball):
     """!
     @brief move the ball depending on collision and ballMovements
     the player wants to kick the ball in front of him
 
-    @param keys the key events that got pressed
     @param players list of SoccerRobots to check for collision
     @param ball the ball Object to be moved
 
@@ -27,15 +24,14 @@ def ballMovementsThroughPlayerCollision(
     """
     from Actions.Movement import ballMovement
 
-    playerRectangles = []
     for player in players:
-        playerRectangles.append(player.rectangle)
+        # playerRectangles.append(player.rectangle)
 
-    collisionDetect = ball.rectangle.collidelist(playerRectangles)
-    if collisionDetect >= 0:
-        # print(f"ball: X {ball.positionX} and Y {ball.positionY}")
-        # the "keys" have to be processed further in the Movement method
-        ballMovement(keys, ball)
+        collisionDetect = ball.rectangle.colliderect(player.rectangle)
+        if collisionDetect:
+            # print(f"ball: X {ball.positionX} and Y {ball.positionY}")
+            # the "keys" have to be processed further in the Movement method
+            ballMovement(ball, player)
 
 
 def playerCollideWithPlayer(players: list[SoccerRobot]):
@@ -43,7 +39,6 @@ def playerCollideWithPlayer(players: list[SoccerRobot]):
     @brief prevention of players walking 'over' each other
     if players collide, they are not allowed to cross each other
 
-    @param keys the key events that got pressed
     @param players a list of soccerRobots
 
     @return void This function does not return a value.
