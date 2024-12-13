@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['field_0',['field',['../class_classes_1_1_ball_1_1_ball.html#a16689a83a9f2f7266ee35a81642a045b',1,'Classes.Ball.Ball.field(self)'],['../class_classes_1_1_ball_1_1_ball.html#a5a69cbdf7a48c8a7a99d695302f0614c',1,'Classes.Ball.Ball.field(self, value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a6c1799948722273296f07e0a5dfe4b51',1,'Classes.SoccerRobot.SoccerRobot.field(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ab51a492d5029c94d835b752d167d3eda',1,'Classes.SoccerRobot.SoccerRobot.field(self, value)']]],
-  ['flaticon_20com_1',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['flaticon_20detailed_20information_20in_20resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_2',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['folder_20_3a_20https_3a_20www_20flaticon_20com_3',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['from_20flaticon_20detailed_20information_20in_20resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_4',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]]
+  ['ball_0',['Ball',['../class_classes_1_1_ball_1_1_ball.html',1,'Classes::Ball']]],
+  ['ball_1',['ball',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#abb8eb1ca3e822aaa47eb762cedcf5e4a',1,'Classes.SoccerField.SoccerField.ball(self)'],['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a434d45923821ee4147849cd0c9541d47',1,'Classes.SoccerField.SoccerField.ball(self, value)']]],
+  ['ball_2epy_2',['Ball.py',['../_ball_8py.html',1,'']]],
+  ['ballmovement_3',['ballMovement',['../namespace_actions_1_1_movement.html#ae91fac9b37b9732adacb58ec111f5e7c',1,'Actions::Movement']]],
+  ['ballmovementsthroughplayercollision_4',['ballMovementsThroughPlayerCollision',['../namespace_actions_1_1_collision.html#af69a426b329364fa5a5c61ec93e18176',1,'Actions::Collision']]],
+  ['ballstatus_5',['ballStatus',['../class_classes_1_1_ball_1_1_ball.html#a868c9999c256b842357f7bd5ceb7486b',1,'Classes.Ball.Ball.ballStatus(self)'],['../class_classes_1_1_ball_1_1_ball.html#a1763d1477a4253c2d94c64336f6efda7',1,'Classes.Ball.Ball.ballStatus(self, int value)']]]
 ];

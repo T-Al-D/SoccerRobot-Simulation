@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['simulation_0',['Simulation',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/'],['../md__r_e_a_d_m_e.html',1,'SoccerRobot-Simulation']]],
-  ['simulation_20of_20soccer_20robots_20in_20python_1',['Simulation of soccer robots in Python.',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['size_2',['size',['../class_classes_1_1_ball_1_1_ball.html#a4e1a2b948d2127e8181e9344959821ea',1,'Classes.Ball.Ball.size(self)'],['../class_classes_1_1_ball_1_1_ball.html#a75f3e08ab2bc144bc3664e84ce063fb3',1,'Classes.Ball.Ball.size(self, int value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a6a2f5869685955a813effffd50c0cf44',1,'Classes.SoccerRobot.SoccerRobot.size(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a17c984b8c84e9230ff374d8705089d37',1,'Classes.SoccerRobot.SoccerRobot.size(self, int value)']]],
-  ['soccer_20robots_20in_20python_3',['Simulation of soccer robots in Python.',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['soccerfield_4',['SoccerField',['../class_classes_1_1_soccer_field_1_1_soccer_field.html',1,'Classes::SoccerField']]],
-  ['soccerfield_2epy_5',['SoccerField.py',['../_soccer_field_8py.html',1,'']]],
-  ['soccerrobot_6',['SoccerRobot',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html',1,'Classes::SoccerRobot']]],
-  ['soccerrobot_20simulation_7',['SoccerRobot Simulation',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/'],['../md__r_e_a_d_m_e.html',1,'SoccerRobot-Simulation']]],
-  ['soccerrobot_2epy_8',['SoccerRobot.py',['../_soccer_robot_8py.html',1,'']]],
-  ['sources_3a_9',['Sources:',['../md_resources_2_mention_of_sources.html',1,'']]],
-  ['south_5fdirection_10',['SOUTH_DIRECTION',['../namespace_constants_1_1_const.html#ad30b1fe8ad714a0286e21f974c14b4a1',1,'Constants::Const']]],
-  ['south_5feast_5fdirection_11',['SOUTH_EAST_DIRECTION',['../namespace_constants_1_1_const.html#a22e5613057750d04f15774fe15d7f80e',1,'Constants::Const']]],
-  ['south_5fwest_5fdirection_12',['SOUTH_WEST_DIRECTION',['../namespace_constants_1_1_const.html#a6384a5b99e76b40d509857b3609109ba',1,'Constants::Const']]],
-  ['speed_13',['speed',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a87d279154db9a0c50cef7d36640550d7',1,'Classes.SoccerRobot.SoccerRobot.speed(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ae199927d2411c4eb0fef793465c51303',1,'Classes.SoccerRobot.SoccerRobot.speed(self, float value)']]],
-  ['standing_5fstill_14',['STANDING_STILL',['../namespace_constants_1_1_const.html#ab157d0c9cbf31b80c68cf7afd0f20468',1,'Constants::Const']]],
-  ['status_15',['status',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a8fea711bb704d8beedfe0764fc44fa0d',1,'Classes.SoccerField.SoccerField.status(self)'],['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a01089996fd8f4d07eec2b3ef8c6187ed',1,'Classes.SoccerField.SoccerField.status(self, int value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a70a8b39ae15cce70a614c104d49ecb25',1,'Classes.SoccerRobot.SoccerRobot.status(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a0992e7aa3b33e27e59ab2c497820405f',1,'Classes.SoccerRobot.SoccerRobot.status(self, int value)']]],
-  ['step_16',['step',['../class_classes_1_1_ball_1_1_ball.html#ab0b7879e4a7989479e5a15185c353ec4',1,'Classes.Ball.Ball.step(self)'],['../class_classes_1_1_ball_1_1_ball.html#a3776778a9f7ebd0a9d7ff240018d4aca',1,'Classes.Ball.Ball.step(self, int value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ae5bdd1947831a463f3399d01baf32409',1,'Classes.SoccerRobot.SoccerRobot.step(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#abab6e68671b96e621901464225451773',1,'Classes.SoccerRobot.SoccerRobot.step(self, float value)']]]
+  ['news_0',['Implemented with pygame : https://www.pygame.org/news',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['nl_1',['Documentation generated with doxygen : https://www.doxygen.nl/',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['north_5fdirection_2',['NORTH_DIRECTION',['../namespace_constants_1_1_const.html#a502ca311978226a149fcaab9f84b9621',1,'Constants::Const']]],
+  ['north_5feast_5fdirection_3',['NORTH_EAST_DIRECTION',['../namespace_constants_1_1_const.html#a65f050e34c0a6a8131412b0b25aac15b',1,'Constants::Const']]],
+  ['north_5fwest_5fdirection_4',['NORTH_WEST_DIRECTION',['../namespace_constants_1_1_const.html#abf20378c07445c9066744a026a4972a1',1,'Constants::Const']]]
 ];

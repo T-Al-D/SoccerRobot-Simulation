@@ -5,7 +5,7 @@
 
 ### githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/
 
-# Simulation of soccer robots in Python (min. Python 3.10) and pygame (2.6)
+# Simulation of soccer robots in Python (min. 3.10) and pygame (2.6)
 
 ### Implemented with pygame : https://www.pygame.org/news
 
