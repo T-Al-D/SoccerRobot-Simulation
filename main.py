@@ -110,6 +110,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
         # all game logic is in here
         gameIsRunning(75, screen, soccerField, ball, soccerRobot1, soccerRobot2)
+
         # Ensure the window gets updated
         pygame.display.update()
 

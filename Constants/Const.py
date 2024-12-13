@@ -6,17 +6,29 @@ variables that only need to be declared once
 
 from typing import Final
 
-# CONSTANTS
+import pygame
+
+# basic directions
+STANDING_STILL: Final[int] = 0
 NORTH_DIRECTION: Final[int] = 1
-NORTH_EAST_DIRECTION: Final[int] = 2
 EAST_DIRECTION: Final[int] = 3
-SOUTH_EAST_DIRECTION: Final[int] = 4
 SOUTH_DIRECTION: Final[int] = 5
-SOUTH_WEST_DIRECTION: Final[int] = 6
 WEST_DIRECTION: Final[int] = 7
+ALL_BASIC_DIRECTIONS = [
+    NORTH_DIRECTION,
+    EAST_DIRECTION,
+    SOUTH_DIRECTION,
+    WEST_DIRECTION,
+]
+
+# inbetween directions
+NORTH_EAST_DIRECTION: Final[int] = 2
+SOUTH_EAST_DIRECTION: Final[int] = 4
+SOUTH_WEST_DIRECTION: Final[int] = 6
 NORTH_WEST_DIRECTION: Final[int] = 8
 
-allBasicDirections = [NORTH_DIRECTION, EAST_DIRECTION, SOUTH_DIRECTION, WEST_DIRECTION]
+# basic arrow keys for direction
+ALL_BASIC_ARROWKEYS = [pygame.K_UP, pygame.K_RIGHT, pygame.K_DOWN, pygame.K_LEFT]
 
 # Margin for the "outside" of the field
 OUTER_PADDING: Final[int] = 20

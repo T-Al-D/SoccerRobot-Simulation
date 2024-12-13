@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['id_0',['id',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a455b8cef653fd64228f5c7098576ca5c',1,'Classes::SoccerRobot::SoccerRobot']]],
-  ['image_1',['image',['../class_classes_1_1_ball_1_1_ball.html#acf15a25321c1b018e24042e8bc7685d7',1,'Classes.Ball.Ball.image'],['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a1728b3e764ce6706a4fee025a9dd73b9',1,'Classes.SoccerField.SoccerField.image'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ae98a5b11fa5995d0093a4bda7a5dcac5',1,'Classes.SoccerRobot.SoccerRobot.image']]]
+  ['south_5fdirection_0',['SOUTH_DIRECTION',['../namespace_constants_1_1_const.html#ad30b1fe8ad714a0286e21f974c14b4a1',1,'Constants::Const']]],
+  ['south_5feast_5fdirection_1',['SOUTH_EAST_DIRECTION',['../namespace_constants_1_1_const.html#a22e5613057750d04f15774fe15d7f80e',1,'Constants::Const']]],
+  ['south_5fwest_5fdirection_2',['SOUTH_WEST_DIRECTION',['../namespace_constants_1_1_const.html#a6384a5b99e76b40d509857b3609109ba',1,'Constants::Const']]],
+  ['standing_5fstill_3',['STANDING_STILL',['../namespace_constants_1_1_const.html#ab157d0c9cbf31b80c68cf7afd0f20468',1,'Constants::Const']]]
 ];
