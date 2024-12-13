@@ -3,9 +3,8 @@
 @brief function for movement in simulation
 """
 
+import random
 import pygame
-from Classes.Ball import Ball
-from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
@@ -63,42 +62,28 @@ def playerCollideMove(player: SoccerRobot):
 
     @return void This function does not return a value.
     """
+    secondMove: int = Const.STANDING_STILL
+    randomHorizontal: int = random.choice(Const.HORIZONTAL_MOVEMENT)
+    randomVertival: int = random.choice(Const.VERTICAL_MOVEMENT)
+
     stepBack: float = 2.25
     match player.currentDirection:
         case Const.WEST_DIRECTION:
             player.currentDirection = Const.EAST_DIRECTION
-            player.move(stepBack)
+            secondMove = randomVertival
         case Const.EAST_DIRECTION:
             player.currentDirection = Const.WEST_DIRECTION
-            player.move(stepBack)
+            secondMove = randomVertival
         case Const.NORTH_DIRECTION:
             player.currentDirection = Const.SOUTH_DIRECTION
-            player.move(stepBack)
+            secondMove = randomHorizontal
         case Const.SOUTH_DIRECTION:
             player.currentDirection = Const.NORTH_DIRECTION
-            player.move(stepBack)
+            secondMove = randomHorizontal
         case _:
             pass
+    player.move(stepBack)
 
-
-def ballMovement(ball: Ball, player: SoccerRobot):
-    """!
-    @brief ball movements depending on what key is pressed
-
-    @param ball the ball Object
-    @param player the soccerRobot that "kicks" the ball
-
-    @return void This function does not return a value.
-    """
-    playerDirection = player.currentDirection
-    match playerDirection:
-        case Const.NORTH_DIRECTION:
-            ball.move(Const.NORTH_DIRECTION)
-        case Const.SOUTH_DIRECTION:
-            ball.move(Const.SOUTH_DIRECTION)
-        case Const.EAST_DIRECTION:
-            ball.move(Const.EAST_DIRECTION)
-        case Const.WEST_DIRECTION:
-            ball.move(Const.WEST_DIRECTION)
-        case _:
-            pass
+    # secondMove is an additional move needed to evade the other player
+    player.currentDirection = secondMove
+    player.move(stepBack)
