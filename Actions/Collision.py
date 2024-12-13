@@ -22,16 +22,13 @@ def ballMovementsThroughPlayerCollision(players: list[SoccerRobot], ball: Ball):
 
     @return void This function does not return a value.
     """
-    from Actions.Movement import ballMovement
-
     for player in players:
-        # playerRectangles.append(player.rectangle)
-
         collisionDetect = ball.rectangle.colliderect(player.rectangle)
         if collisionDetect:
             # print(f"ball: X {ball.positionX} and Y {ball.positionY}")
             # the "keys" have to be processed further in the Movement method
-            ballMovement(ball, player)
+            ball.currentDirection = player.currentDirection
+            ball.move()
 
 
 def playerCollideWithPlayer(players: list[SoccerRobot]):
@@ -43,7 +40,6 @@ def playerCollideWithPlayer(players: list[SoccerRobot]):
 
     @return void This function does not return a value.
     """
-    # print(f"players {players}")
     # Loop through each player and check for collision with others
     for player in players:
         # Check for collision with other players
@@ -52,7 +48,6 @@ def playerCollideWithPlayer(players: list[SoccerRobot]):
             if player != otherPlayer:
                 # in case of collision, reset position of player
                 if player.rectangle.colliderect(otherPlayer.rectangle):
-                    # print(f"player {player} and otherPlayer {otherPlayer}")
                     # If collision detected, reset position to original one
                     playerCollideMove(player)
                     # Exit the loop after correcting position

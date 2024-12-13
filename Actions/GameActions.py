@@ -3,7 +3,6 @@
 @brief all game logic is executed here in abstract form
 """
 
-import random
 import pygame
 
 from Actions.Collision import (
@@ -12,6 +11,7 @@ from Actions.Collision import (
 )
 from Actions.Drawing import drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
+from Actions.RobotChoice import playersNextCoice
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
@@ -45,7 +45,6 @@ def gameIsRunning(
     """
     # local import of functions (prevention of circular imports)
     from Actions.Drawing import drawAllPlayers
-    from Actions.Movement import playerMovement
 
     # Import the (global variable) clock from main.py
     from main import clock
@@ -74,9 +73,8 @@ def gameIsRunning(
     ################# MOVEMENT #################
     # movement for player1 (soccerRobots)
     playerManualMove(keys, player1)
-    # random choice for movement for player2
-    randomMove = random.choice(Const.ALL_BASIC_ARROWKEYS)
-    playerMovement(randomMove, player2)
+    # function for giving robots "AI-intelligence"
+    playersNextCoice(player2, player1, ball)
 
     ################# COLLISION ################
     # check collision with ball
@@ -87,6 +85,7 @@ def gameIsRunning(
     ################# RESET #####################
     for player in field.players:
         player.resetDirection()
+    ball.standingStill()
 
     # Update the display
     pygame.display.flip()

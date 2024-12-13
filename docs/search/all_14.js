@@ -6,6 +6,7 @@ var searchData=
   ['resources_3',['resources',['../namespaceresources.html',1,'']]],
   ['resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_4',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
   ['returnteamscore_5',['returnTeamScore',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a18d5a1cd507c21d1722c7c69d061dd66',1,'Classes::SoccerField::SoccerField']]],
-  ['robots_20in_20python_20min_203_2010_20and_20pygame_202_206_6',['Simulation of soccer robots in Python (min. 3.10) and pygame (2.6)',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['runsimulation_7',['runSimulation',['../namespacemain.html#a8d7972ceca3d89f1e68929cc730c683d',1,'main']]]
+  ['robotchoice_2epy_6',['RobotChoice.py',['../_robot_choice_8py.html',1,'']]],
+  ['robots_20in_20python_20min_203_2010_20and_20pygame_202_206_7',['Simulation of soccer robots in Python (min. 3.10) and pygame (2.6)',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['runsimulation_8',['runSimulation',['../namespacemain.html#a8d7972ceca3d89f1e68929cc730c683d',1,'main']]]
 ];

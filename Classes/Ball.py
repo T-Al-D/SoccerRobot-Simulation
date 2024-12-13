@@ -55,13 +55,13 @@ class Ball:
     @field.setter
     def field(self, value):
         self._field: SoccerField = value
-    
+
     @property
     def currentDirection(self):
         return self._currentDirection
 
     @currentDirection.setter
-    def currentDirection(self, value : int):
+    def currentDirection(self, value: int):
         self._currentDirection = value
 
     @property
@@ -104,7 +104,7 @@ class Ball:
     def image(self, value):
         self._image: pygame.image = value
 
-    def move(self, direction: int):
+    def move(self):
         """!
         @brief moves the x or y position of the ball on the field
         after that it sets the internal rectangle
@@ -113,24 +113,35 @@ class Ball:
 
         @return void This function does not return a value.
         """
-        match direction:
+        match self.currentDirection:
             case Const.NORTH_DIRECTION:
                 if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
                     self.positionY -= self.step
+                else:
+                    self.positionY += self.size
             case Const.EAST_DIRECTION:
                 if self.positionX < (
                     self.field.width - self.size - Const.OUTER_PADDING
                 ):
                     self.positionX += self.step
+                else:
+                    self.positionX -= self.size
             case Const.SOUTH_DIRECTION:
                 if self.positionY < (self.field.height - Const.OUTER_PADDING + 5):
                     self.positionY += self.step
+                else:
+                    self.positionY -= self.size
             case Const.WEST_DIRECTION:
                 if self.positionX > Const.OUTER_PADDING:
                     self.positionX -= self.step
+                else:
+                    self.positionX += self.size
             case _:
                 pass
 
         # after each change of x or y, set the internal rectangle
         self.rectangle.x = self.positionX
         self.rectangle.y = self.positionY
+
+    def standingStill(self):
+        self.currentDirection = Const.STANDING_STILL
