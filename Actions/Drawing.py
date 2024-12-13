@@ -9,6 +9,21 @@ from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 
 
+def drawText(text:str):
+    """!
+    @brief create label
+
+    @param text input string
+    @return labelImg text renderd in image
+    """
+    textColor = (255,255,255)
+    font = pygame.font.SysFont("Jokerman", 35)
+    labelImg = font.render(text, True, textColor)
+    return labelImg
+
+
+
+
 def drawRectangleOnScreen(
     displayScreen: pygame.Surface, rectangle: pygame.Rect, image: pygame.image
 ):
