@@ -20,14 +20,17 @@ def playerMovement(key: pygame.key, player: SoccerRobot):
 
     @return void This function does not return a value.
     """
-    if key == pygame.K_LEFT:
-        player.currentDirection = Const.WEST_DIRECTION
-    elif key == pygame.K_RIGHT:
-        player.currentDirection = Const.EAST_DIRECTION
-    elif key == pygame.K_UP:
-        player.currentDirection = Const.NORTH_DIRECTION
-    elif key == pygame.K_DOWN:
-        player.currentDirection = Const.SOUTH_DIRECTION
+    match key:
+        case pygame.K_UP:
+            player.currentDirection = Const.NORTH_DIRECTION
+        case pygame.K_DOWN:
+            player.currentDirection = Const.SOUTH_DIRECTION
+        case pygame.K_RIGHT:
+            player.currentDirection = Const.EAST_DIRECTION
+        case pygame.K_LEFT:
+            player.currentDirection = Const.WEST_DIRECTION
+        case _:
+            pass
     player.move()
 
 
@@ -53,7 +56,7 @@ def playerManualMove(keys, player: SoccerRobot):
 
 def playerCollideMove(player: SoccerRobot):
     """!
-    @brief once a player has collided with another player, 
+    @brief once a player has collided with another player,
     move the player in opposite direction to prevent a "walk over"
 
     @param player, the current player that has the collision
@@ -61,35 +64,41 @@ def playerCollideMove(player: SoccerRobot):
     @return void This function does not return a value.
     """
     stepBack: float = 2.25
-    playerDirection = player.currentDirection
-    if playerDirection == Const.WEST_DIRECTION:
-        player.currentDirection = Const.EAST_DIRECTION
-        player.move(stepBack)
-    elif playerDirection == Const.EAST_DIRECTION:
-        player.currentDirection = Const.WEST_DIRECTION
-        player.move(stepBack)
-    elif playerDirection == Const.NORTH_DIRECTION:
-        player.currentDirection = Const.SOUTH_DIRECTION
-        player.move(stepBack)
-    elif playerDirection == Const.SOUTH_DIRECTION:
-        player.currentDirection = Const.NORTH_DIRECTION
-        player.move(stepBack)
+    match player.currentDirection:
+        case Const.WEST_DIRECTION:
+            player.currentDirection = Const.EAST_DIRECTION
+            player.move(stepBack)
+        case Const.EAST_DIRECTION:
+            player.currentDirection = Const.WEST_DIRECTION
+            player.move(stepBack)
+        case Const.NORTH_DIRECTION:
+            player.currentDirection = Const.SOUTH_DIRECTION
+            player.move(stepBack)
+        case Const.SOUTH_DIRECTION:
+            player.currentDirection = Const.NORTH_DIRECTION
+            player.move(stepBack)
+        case _:
+            pass
 
 
-def ballMovement(keys: pygame.key, ball: Ball):
+def ballMovement(ball: Ball, player: SoccerRobot):
     """!
     @brief ball movements depending on what key is pressed
 
-    @param keys the key events that got pressed
     @param ball the ball Object
+    @param player the soccerRobot that "kicks" the ball
 
     @return void This function does not return a value.
     """
-    if keys[pygame.K_LEFT]:
-        ball.move(Const.WEST_DIRECTION)
-    elif keys[pygame.K_RIGHT]:
-        ball.move(Const.EAST_DIRECTION)
-    elif keys[pygame.K_UP]:
-        ball.move(Const.NORTH_DIRECTION)
-    elif keys[pygame.K_DOWN]:
-        ball.move(Const.SOUTH_DIRECTION)
+    playerDirection = player.currentDirection
+    match playerDirection:
+        case Const.NORTH_DIRECTION:
+            ball.move(Const.NORTH_DIRECTION)
+        case Const.SOUTH_DIRECTION:
+            ball.move(Const.SOUTH_DIRECTION)
+        case Const.EAST_DIRECTION:
+            ball.move(Const.EAST_DIRECTION)
+        case Const.WEST_DIRECTION:
+            ball.move(Const.WEST_DIRECTION)
+        case _:
+            pass

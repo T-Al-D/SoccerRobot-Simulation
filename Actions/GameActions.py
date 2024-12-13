@@ -55,7 +55,7 @@ def gameIsRunning(
 
     ################# DRAWING ##################
     # "draw" the label on screen
-    labelImage = drawText('Time duration:')
+    labelImage = drawText("Time duration:")
     displayScreen.blit(labelImage, (0, 0))
 
     # draw the background image , leaving out the top - margin for the label
@@ -80,7 +80,7 @@ def gameIsRunning(
 
     ################# COLLISION ################
     # check collision with ball
-    ballMovementsThroughPlayerCollision(keys, field.players, ball)
+    ballMovementsThroughPlayerCollision(field.players, ball)
     # check collision between players
     playerCollideWithPlayer(field.players)
 
