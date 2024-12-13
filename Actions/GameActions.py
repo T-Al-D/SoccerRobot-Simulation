@@ -10,7 +10,7 @@ from Actions.Collision import (
     ballMovementsThroughPlayerCollision,
     playerCollideWithPlayer,
 )
-from Actions.Drawing import drawRectangleOnScreen
+from Actions.Drawing import drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
@@ -55,8 +55,8 @@ def gameIsRunning(
 
     ################# DRAWING ##################
     # "draw" the label on screen
-    # labelImage =
-    # displayScreen.blit(labelImage, (0, 0))
+    labelImage = drawText('Time duration:')
+    displayScreen.blit(labelImage, (0, 0))
 
     # draw the background image , leaving out the top - margin for the label
     displayScreen.blit(field.image, (0, Const.TOP_MARGIN))
