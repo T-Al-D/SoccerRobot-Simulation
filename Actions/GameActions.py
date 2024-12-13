@@ -10,7 +10,7 @@ from Actions.Collision import (
     ballMovementsThroughPlayerCollision,
     playerCollideWithPlayer,
 )
-from Actions.Drawing import drawRectangleOnScreen
+from Actions.Drawing import drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
