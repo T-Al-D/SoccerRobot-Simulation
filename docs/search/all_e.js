@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['of_20soccer_20robots_20in_20python_0',['Simulation of soccer robots in Python.',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
-  ['org_20news_1',['Implemented with pygame : https://www.pygame.org/news',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
-  ['outer_5fpadding_2',['OUTER_PADDING',['../namespace_constants_1_1_const.html#a639dc683b68dff2748e27dbeaaea869d',1,'Constants::Const']]]
+  ['id_0',['id',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ab569cce3e80127c66a6f15369b17c4f9',1,'Classes.SoccerRobot.SoccerRobot.id(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a32db9d63e729aceb276fdea7c7b3f2bc',1,'Classes.SoccerRobot.SoccerRobot.id(self, int value)']]],
+  ['image_1',['image',['../class_classes_1_1_ball_1_1_ball.html#acc5c3ab138f215a5c3e60f1398f13f1f',1,'Classes.Ball.Ball.image(self)'],['../class_classes_1_1_ball_1_1_ball.html#a4a97b2108e3d679e933aec1d01764be9',1,'Classes.Ball.Ball.image(self, value)'],['../class_classes_1_1_soccer_field_1_1_soccer_field.html#adf75f2ef9b4dbebee93e92ca963e3e3c',1,'Classes.SoccerField.SoccerField.image(self)'],['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a6c3dec317c84b158bd2976cccc8f379a',1,'Classes.SoccerField.SoccerField.image(self, value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ade899460cd6f068e3158c759ff774f66',1,'Classes.SoccerRobot.SoccerRobot.image(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a8e25019ff520bff7e3b07241a688a80c',1,'Classes.SoccerRobot.SoccerRobot.image(self, value)']]],
+  ['images_20from_20flaticon_20detailed_20information_20in_20resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_2',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['images_2epy_3',['Images.py',['../_images_8py.html',1,'']]],
+  ['implemented_20with_20pygame_20_3a_20https_3a_20www_20pygame_20org_20news_4',['Implemented with pygame : https://www.pygame.org/news',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
+  ['in_20python_20min_203_2010_20and_20pygame_202_206_5',['Simulation of soccer robots in Python (min. 3.10) and pygame (2.6)',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['in_20resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_6',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['information_20in_20resources_20folder_20_3a_20https_3a_20www_20flaticon_20com_7',['Images from flatIcon (-&gt; detailed information in &quot;resources&quot;-folder) : https://www.flaticon.com/',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['io_20soccerrobot_20simulation_8',['githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];
