@@ -14,51 +14,56 @@ subgraph legend{
         <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
         </table></td></tr></table>
         >];
-}node_80e4176c [label="15: ballMovementsThroughPlayerCollision()" name="Collision::ballMovementsThroughPlayerCollision" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
-node_7bd6a252 [label="37: playerCollideWithPlayer()" name="Collision::playerCollideWithPlayer" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
-node_ec41df5d [label="41: drawAllPlayers()" name="Drawing::drawAllPlayers" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
-node_c5d70284 [label="26: drawRectangleOnScreen()" name="Drawing::drawRectangleOnScreen" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_73f5e29d [label="12: drawText()" name="Drawing::drawText" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_081ca49c [label="23: gameIsRunning()" name="GameActions::gameIsRunning" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
-node_8d779691 [label="84: ballMovement()" name="Movement::ballMovement" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_8169d284 [label="57: playerCollideMove()" name="Movement::playerCollideMove" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_49271c51 [label="37: playerManualMove()" name="Movement::playerManualMove" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_905dca30 [label="14: playerMovement()" name="Movement::playerMovement" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
-node_80e4176c -> node_8d779691 [color="#F0E442" penwidth="2"];
-node_7bd6a252 -> node_8169d284 [color="#56B4E9" penwidth="2"];
-node_ec41df5d -> node_c5d70284 [color="#0072B2" penwidth="2"];
-node_081ca49c -> node_80e4176c [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_7bd6a252 [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_ec41df5d [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_c5d70284 [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_73f5e29d [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_49271c51 [color="#F0E442" penwidth="2"];
-node_081ca49c -> node_905dca30 [color="#F0E442" penwidth="2"];
-subgraph cluster_3803fb0e {
-    node_80e4176c node_7bd6a252;
+}node_b16f4b05 [label="15: ballMovementsThroughPlayerCollision()" name="Collision::ballMovementsThroughPlayerCollision" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4704fc57 [label="34: playerCollideWithPlayer()" name="Collision::playerCollideWithPlayer" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_82bcca87 [label="41: drawAllPlayers()" name="Drawing::drawAllPlayers" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_451d57d8 [label="26: drawRectangleOnScreen()" name="Drawing::drawRectangleOnScreen" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_dad2a8ca [label="12: drawText()" name="Drawing::drawText" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a3f664db [label="23: gameIsRunning()" name="GameActions::gameIsRunning" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fdd73e30 [label="56: playerCollideMove()" name="Movement::playerCollideMove" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cbbd760a [label="36: playerManualMove()" name="Movement::playerManualMove" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d4232a49 [label="11: playersNextCoice()" name="RobotChoice::playersNextCoice" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4704fc57 -> node_fdd73e30 [color="#CC79A7" penwidth="2"];
+node_82bcca87 -> node_451d57d8 [color="#CC79A7" penwidth="2"];
+node_a3f664db -> node_b16f4b05 [color="#009E73" penwidth="2"];
+node_a3f664db -> node_4704fc57 [color="#009E73" penwidth="2"];
+node_a3f664db -> node_82bcca87 [color="#009E73" penwidth="2"];
+node_a3f664db -> node_451d57d8 [color="#009E73" penwidth="2"];
+node_a3f664db -> node_dad2a8ca [color="#009E73" penwidth="2"];
+node_a3f664db -> node_cbbd760a [color="#009E73" penwidth="2"];
+node_a3f664db -> node_d4232a49 [color="#009E73" penwidth="2"];
+subgraph cluster_f861a06f {
+    node_b16f4b05 node_4704fc57;
     label="File: Collision";
     name="Collision";
     style="filled";
     graph[style=dotted];
 };
-subgraph cluster_bd5ce12e {
-    node_73f5e29d node_c5d70284 node_ec41df5d;
+subgraph cluster_f90ab8df {
+    node_dad2a8ca node_451d57d8 node_82bcca87;
     label="File: Drawing";
     name="Drawing";
     style="filled";
     graph[style=dotted];
 };
-subgraph cluster_ed6802bf {
-    node_081ca49c;
+subgraph cluster_1a881e15 {
+    node_a3f664db;
     label="File: GameActions";
     name="GameActions";
     style="filled";
     graph[style=dotted];
 };
-subgraph cluster_4c417189 {
-    node_905dca30 node_49271c51 node_8169d284 node_8d779691;
+subgraph cluster_a3499856 {
+    node_cbbd760a node_fdd73e30;
     label="File: Movement";
     name="Movement";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_09d75108 {
+    node_d4232a49;
+    label="File: RobotChoice";
+    name="RobotChoice";
     style="filled";
     graph[style=dotted];
 };

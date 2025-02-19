@@ -8,7 +8,7 @@ from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
 
-def playersNextCoice(player: SoccerRobot, otherPlayer: SoccerRobot, ball: Ball):
+def playersNextChoice(player: SoccerRobot, otherPlayer: SoccerRobot, ball: Ball):
     """!
     @brief generated the next possible move for the soccerRobot
 

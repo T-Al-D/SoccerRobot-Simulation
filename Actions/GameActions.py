@@ -11,7 +11,7 @@ from Actions.Collision import (
 )
 from Actions.Drawing import drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
-from Actions.RobotChoice import playersNextCoice
+from Actions.RobotChoice import playersNextChoice
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
@@ -74,7 +74,7 @@ def gameIsRunning(
     # movement for player1 (soccerRobots)
     playerManualMove(keys, player1)
     # function for giving robots "AI-intelligence"
-    playersNextCoice(player2, player1, ball)
+    playersNextChoice(player2, player1, ball)
 
     ################# COLLISION ################
     # check collision with ball

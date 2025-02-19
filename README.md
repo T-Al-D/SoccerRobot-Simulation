@@ -17,7 +17,9 @@ Commands: doxygen -g, doxygen Doxyfile
 
 ### Diagramms created with graphiz, code2flow and pyreverse
 
-Commands: - pyreverse -o png -p SoccerRobot-Simultaion Classes/ (for Classes) - code2flow Actions (for the Methods)
+Commands: 
+- pyreverse -o png -p SoccerRobot-Simultaion Classes/ (for Classes) 
+- code2flow Actions (for the Methods)
 
 ### Tests with pytest:
 
