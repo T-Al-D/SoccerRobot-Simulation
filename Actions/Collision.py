@@ -12,7 +12,7 @@ from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
 
-def ballMovementsThroughPlayerCollision(players: list[SoccerRobot], ball: Ball):
+def ballMoveOnPlayerCollision(players: list[SoccerRobot], ball: Ball):
     """!
     @brief move the ball depending on collision and ballMovements
     the player wants to kick the ball in front of him

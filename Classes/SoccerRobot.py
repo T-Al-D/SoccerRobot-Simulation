@@ -181,7 +181,7 @@ class SoccerRobot:
         # self.currentDirection = direction
         match self.currentDirection:
             case Const.NORTH_DIRECTION:
-                if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
+                if self.positionY > (Const.OUTER_PADDING):
                     self.positionY -= int(self.step * extraSteps)
             case Const.EAST_DIRECTION:
                 if self.positionX < (
@@ -189,7 +189,9 @@ class SoccerRobot:
                 ):
                     self.positionX += self.step * extraSteps
             case Const.SOUTH_DIRECTION:
-                if self.positionY < (self.field.height - Const.OUTER_PADDING - 5):
+                if self.positionY < (
+                    self.field.height - Const.OUTER_PADDING - self.size
+                ):
                     self.positionY += int(self.step * extraSteps)
             case Const.WEST_DIRECTION:
                 if self.positionX > Const.OUTER_PADDING:

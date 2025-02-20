@@ -5,6 +5,7 @@
 
 import pygame
 
+from Classes.Goal import Goal
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 
@@ -24,27 +25,46 @@ def drawText(text: str):
 
 
 def drawRectangleOnScreen(
-    displayScreen: pygame.Surface, rectangle: pygame.Rect, image: pygame.image
+    surface: pygame.Surface, rectangle: pygame.Rect, image: pygame.image
 ):
     """!
     @brief draw ball on screen
     create a rectangle and draw it on screen with an image on it
 
-    @param displayScreen on what surface to draw the objects (pygame.Surface)
+    @param surface on what surface to draw the objects (pygame.Surface)
     @param image a pygame.image to draw on the surface
 
     @return void
     """
-    displayScreen.blit(image, rectangle)
+    surface.blit(image, rectangle)
 
 
-def drawAllPlayers(displayScreen: pygame.Surface, playerList: list[SoccerRobot]):
+def drawGoalsInScreen(surface: pygame.Surface, goals: list[Goal], color: tuple[int]):
+    """!
+    @brief draw the goals onto the screen/surface
+    create a rectangle, but only with border
+
+    @param surface on what surface to draw the objects (pygame.Surface)
+    @param goals list of goals to be drawn
+
+    @return void
+    """
+    for goal in goals:
+        pygame.draw.rect(
+            surface,
+            color,
+            (goal.positionX, goal.positionY, goal.width, goal.height),
+            width=5,
+        )
+
+
+def drawAllPlayers(surface: pygame.Surface, playerList: list[SoccerRobot]):
     """!
     @brief draw all players on screen
     uses other function drawPlayer(...) to draw all players (for-loop)
     @see drawPlayer
 
-    @param displayScreen on what surface to draw the objects (pygame.Surface)
+    @param surface on what surface to draw the objects (pygame.Surface)
     @param playerList list with all players to be drawn
 
     @return void
@@ -52,4 +72,4 @@ def drawAllPlayers(displayScreen: pygame.Surface, playerList: list[SoccerRobot])
 
     # draw all the player on the field and append the created rectangle into array
     for player in playerList:
-        drawRectangleOnScreen(displayScreen, player.rectangle, player.image)
+        drawRectangleOnScreen(surface, player.rectangle, player.image)

@@ -5,6 +5,7 @@
 
 import pygame
 from Actions.Images import loadAndScaleImage
+from Classes import Goal
 
 
 class SoccerField:
@@ -17,6 +18,8 @@ class SoccerField:
         status: int,
         width: int,
         height: int,
+        team1Goal: Goal,
+        team2Goal: Goal,
         playTimeInMinutes: int,
         imagePath: str,
     ):
@@ -32,11 +35,8 @@ class SoccerField:
         self._width: int = width
         self._height: int = height
         self._playTimeInMinutes: int = playTimeInMinutes
-        self._team1Score: int = 0
-        self._team2Score: int = 0
-        self._team1GoalStatus: int = 0
-        self._team2GoalStatus: int = 0
-
+        self._team1Goal: int = team1Goal
+        self._team2Goal: int = team2Goal
         self._players: list[SoccerRobot] = []
         self._ball: Ball = None
         self._image: pygame.image = loadAndScaleImage(
@@ -76,36 +76,20 @@ class SoccerField:
         self._playTimeInMinutes: int = value
 
     @property
-    def team1Score(self):
-        return self._team1Score
+    def team1Goal(self):
+        return self._team1Goal
 
-    @team1Score.setter
-    def team1Score(self, value: int):
-        self._team1Score = value
-
-    @property
-    def team2Score(self):
-        return self._team2Score
-
-    @team2Score.setter
-    def team2Score(self, value: int):
-        self._team2Score = value
+    @team1Goal.setter
+    def team1Goal(self, value: int):
+        self._team1Goal = value
 
     @property
-    def team1GoalStatus(self):
-        return self._team1GoalStatus
+    def team2Goal(self):
+        return self._team2Goal
 
-    @team1GoalStatus.setter
-    def team1GoalStatus(self, value: int):
-        self._team1GoalStatus = value
-
-    @property
-    def team2GoalStatus(self):
-        return self._team2GoalStatus
-
-    @team2GoalStatus.setter
-    def team2GoalStatus(self, value: int):
-        self._team2GoalStatus = value
+    @team2Goal.setter
+    def team2Goal(self, value: int):
+        self._team2Goal = value
 
     @property
     def players(self):

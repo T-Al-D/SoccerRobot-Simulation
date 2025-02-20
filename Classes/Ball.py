@@ -115,7 +115,7 @@ class Ball:
         """
         match self.currentDirection:
             case Const.NORTH_DIRECTION:
-                if self.positionY > (Const.OUTER_PADDING + Const.TOP_MARGIN):
+                if self.positionY > (Const.OUTER_PADDING):
                     self.positionY -= self.step
                 else:
                     self.positionY += self.size
@@ -127,7 +127,9 @@ class Ball:
                 else:
                     self.positionX -= self.size
             case Const.SOUTH_DIRECTION:
-                if self.positionY < (self.field.height - Const.OUTER_PADDING + 5):
+                if self.positionY < (
+                    self.field.height - Const.OUTER_PADDING - self.size
+                ):
                     self.positionY += self.step
                 else:
                     self.positionY -= self.size

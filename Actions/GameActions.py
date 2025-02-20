@@ -6,10 +6,10 @@
 import pygame
 
 from Actions.Collision import (
-    ballMovementsThroughPlayerCollision,
+    ballMoveOnPlayerCollision,
     playerCollideWithPlayer,
 )
-from Actions.Drawing import drawRectangleOnScreen, drawText
+from Actions.Drawing import drawGoalsInScreen, drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
 from Actions.RobotChoice import playersNextChoice
 from Classes.Ball import Ball
@@ -23,6 +23,7 @@ from Constants import Const
 def gameIsRunning(
     fps: int,
     displayScreen: pygame.Surface,
+    surfaceLayer: pygame.Surface,
     field: SoccerField,
     ball: Ball,
     player1: SoccerRobot,
@@ -36,6 +37,7 @@ def gameIsRunning(
 
     @param fps frame rate limit
     @param displayScreen the screen where everything is shown
+    @param surfaceLayer a "layer" ontop the screen -> accepts alpha argument
     @param field The `SoccerField` object representing the game/simulation field.
     @param ball the ball object
     @param player1 The `SoccerRobot` object representing the first player.
@@ -55,16 +57,24 @@ def gameIsRunning(
     ################# DRAWING ##################
     # "draw" the label on screen
     labelImage = drawText("Time duration:")
+
+    # draw the labelImage
     displayScreen.blit(labelImage, (0, 0))
 
     # draw the background image , leaving out the top - margin for the label
-    displayScreen.blit(field.image, (0, Const.TOP_MARGIN))
+    surfaceLayer.blit(field.image, (0, 0))
 
     # draw the ball and assign rectangle to it
-    drawRectangleOnScreen(displayScreen, ball.rectangle, ball.image)
+    drawRectangleOnScreen(surfaceLayer, ball.rectangle, ball.image)
+
+    # draw the goals to make them obvious
+    drawGoalsInScreen(surfaceLayer, [field.team1Goal, field.team2Goal], (255, 255, 225))
 
     # playerRectangles for collision detection
-    drawAllPlayers(displayScreen, field.players)
+    drawAllPlayers(surfaceLayer, field.players)
+
+    # draw "second surface/layer"
+    displayScreen.blit(surfaceLayer, (0, Const.TOP_MARGIN))
 
     ################# KEYS #################
     # get the key that are currently pressed
@@ -78,7 +88,7 @@ def gameIsRunning(
 
     ################# COLLISION ################
     # check collision with ball
-    ballMovementsThroughPlayerCollision(field.players, ball)
+    ballMoveOnPlayerCollision(field.players, ball)
     # check collision between players
     playerCollideWithPlayer(field.players)
 

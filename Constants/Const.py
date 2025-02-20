@@ -41,4 +41,4 @@ OUTER_PADDING: Final[int] = 20
 TOP_MARGIN: Final[int] = 45
 
 # divisor, to make sure the players and ball are in the middle of the y axis
-Y_DIVISOR: Final[float] = 2.0
+Y_DIVISOR: Final[float] = 2.25

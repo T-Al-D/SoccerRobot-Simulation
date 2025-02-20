@@ -9,6 +9,7 @@ import os
 import pygame
 
 # classes from the folders
+from Classes.Goal import Goal
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
@@ -54,12 +55,31 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
     # create a screen (width, height)
     screen = pygame.display.set_mode((screenWidth, internalHeight))
+    # create another layer ontop of the screen to use drawing tools
+    surface = pygame.Surface((screenWidth, internalHeight), pygame.SRCALPHA)
+
+    # mitte des Feldes
+    middleHeight = int((internalHeight) / Y_DIVISOR)
+    goalWidth = 62
+    goalHeight = 150
+    # goals for the team
+    team1Goal = Goal(
+        OUTER_PADDING + 2, middleHeight - int(goalHeight / 2.26), goalWidth, goalHeight
+    )
+    team2Goal = Goal(
+        screenWidth - 4.3 * OUTER_PADDING,
+        middleHeight - int(goalHeight / 2.26),
+        goalWidth,
+        goalHeight,
+    )
 
     # field
     soccerField = SoccerField(
         0,
         screenWidth,
         internalHeight - TOP_MARGIN,
+        team1Goal,
+        team2Goal,
         15,
         "resources/SoccerFieldBackground2.jpg",
     )
@@ -74,7 +94,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         playerSize,
         playerSteps,
         int(screenWidth * 0.82),
-        int((internalHeight) / Y_DIVISOR),
+        middleHeight,
         "resources/SoccerRobotPlayer.png",
         soccerField,
     )
@@ -84,7 +104,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         playerSize,
         playerSteps,
         int(screenWidth * 0.1),
-        int((internalHeight) / Y_DIVISOR),
+        middleHeight,
         "resources/SoccerRobotPlayer.png",
         soccerField,
     )
@@ -109,7 +129,9 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
                 running = False
 
         # all game logic is in here
-        gameIsRunning(75, screen, soccerField, ball, soccerRobot1, soccerRobot2)
+        gameIsRunning(
+            75, screen, surface, soccerField, ball, soccerRobot1, soccerRobot2
+        )
 
         # Ensure the window gets updated
         pygame.display.update()
