@@ -144,6 +144,13 @@ class Ball:
         self.rectangle.y = self.positionY
 
     def resetBallToMiddle(self):
+        """!
+        @brief rest Ball to middle of the field
+
+        @param self the object
+
+        @return void This function does not return a value.
+        """
         self.positionX = int(self.field.width / 2.07)
         self.positionY = int(self.field.height / (Const.Y_DIVISOR - 0.1))
         

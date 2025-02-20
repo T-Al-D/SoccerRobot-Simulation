@@ -8,7 +8,7 @@ import pygame
 
 class Goal:
     """!
-    @brief A class that activates if a goal is scored
+    @brief A class for the goals, on the field
     """
 
     def __init__(

@@ -97,22 +97,25 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:af69a426b329364fa5a5c61ec93e18176" id="r_af69a426b329364fa5a5c61ec93e18176"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af69a426b329364fa5a5c61ec93e18176">ballMovementsThroughPlayerCollision</a> (list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] players, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
-<tr class="memdesc:af69a426b329364fa5a5c61ec93e18176"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the ball depending on collision and ballMovements the player wants to kick the ball in front of him  <br /></td></tr>
-<tr class="separator:af69a426b329364fa5a5c61ec93e18176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78db14f41b8ab3211cf9fee3db79c1f" id="r_ad78db14f41b8ab3211cf9fee3db79c1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78db14f41b8ab3211cf9fee3db79c1f">ballMoveOnPlayerCollision</a> (list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] players, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
+<tr class="memdesc:ad78db14f41b8ab3211cf9fee3db79c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">move the ball depending on collision and ballMovements the player wants to kick the ball in front of him  <br /></td></tr>
+<tr class="separator:ad78db14f41b8ab3211cf9fee3db79c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab727323d9692d42de91634bf4a4bdbc" id="r_aab727323d9692d42de91634bf4a4bdbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab727323d9692d42de91634bf4a4bdbc">playerCollideWithPlayer</a> (list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] players)</td></tr>
 <tr class="memdesc:aab727323d9692d42de91634bf4a4bdbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">prevention of players walking 'over' each other if players collide, they are not allowed to cross each other  <br /></td></tr>
 <tr class="separator:aab727323d9692d42de91634bf4a4bdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe9868dfd65897b34421f464ef22c53" id="r_abfe9868dfd65897b34421f464ef22c53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfe9868dfd65897b34421f464ef22c53">checkBallCollisionWithGoal</a> (<a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball, list[<a class="el" href="class_classes_1_1_goal_1_1_goal.html">Goal</a>] goals)</td></tr>
+<tr class="memdesc:abfe9868dfd65897b34421f464ef22c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">if the ball as any collision with any goal, reset ball position and give Team Points  <br /></td></tr>
+<tr class="separator:abfe9868dfd65897b34421f464ef22c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="af69a426b329364fa5a5c61ec93e18176" name="af69a426b329364fa5a5c61ec93e18176"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af69a426b329364fa5a5c61ec93e18176">&#9670;&#160;</a></span>ballMovementsThroughPlayerCollision()</h2>
+<a id="ad78db14f41b8ab3211cf9fee3db79c1f" name="ad78db14f41b8ab3211cf9fee3db79c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78db14f41b8ab3211cf9fee3db79c1f">&#9670;&#160;</a></span>ballMoveOnPlayerCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Actions.Collision.ballMovementsThroughPlayerCollision </td>
+          <td class="memname">Actions.Collision.ballMoveOnPlayerCollision </td>
           <td>(</td>
           <td class="paramtype">list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>]</td>          <td class="paramname"><span class="paramname"><em>players</em></span>, </td>
         </tr>
@@ -129,6 +132,36 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">players</td><td>list of SoccerRobots to check for collision </td></tr>
     <tr><td class="paramname">ball</td><td>the ball Object to be moved</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void This function does not return a value. </dd></dl>
+
+</div>
+</div>
+<a id="abfe9868dfd65897b34421f464ef22c53" name="abfe9868dfd65897b34421f464ef22c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe9868dfd65897b34421f464ef22c53">&#9670;&#160;</a></span>checkBallCollisionWithGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Actions.Collision.checkBallCollisionWithGoal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a></td>          <td class="paramname"><span class="paramname"><em>ball</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[<a class="el" href="class_classes_1_1_goal_1_1_goal.html">Goal</a>]</td>          <td class="paramname"><span class="paramname"><em>goals</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if the ball as any collision with any goal, reset ball position and give Team Points </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ball</td><td>the soccer-ball object</td></tr>
   </table>
   </dd>
 </dl>

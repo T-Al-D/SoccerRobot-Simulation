@@ -99,6 +99,3 @@ def gameIsRunning(
     for player in field.players:
         player.resetDirection()
     ball.standingStill()
-
-    # Update the display
-    pygame.display.flip()

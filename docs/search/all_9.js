@@ -7,8 +7,9 @@ var searchData=
   ['documentation_3a_20https_3a_20t_20al_20d_20github_20io_20soccerrobot_20simulation_4',['githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
   ['doxygen_20_3a_20https_3a_20www_20doxygen_20nl_5',['Documentation generated with doxygen : https://www.doxygen.nl/',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
   ['doxygen_20nl_6',['Documentation generated with doxygen : https://www.doxygen.nl/',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['drawallplayers_7',['drawAllPlayers',['../namespace_actions_1_1_drawing.html#a9ea685d516be795d8b449705a02439e4',1,'Actions::Drawing']]],
-  ['drawing_2epy_8',['Drawing.py',['../_drawing_8py.html',1,'']]],
-  ['drawrectangleonscreen_9',['drawRectangleOnScreen',['../namespace_actions_1_1_drawing.html#addbd524e1823265ccba855554c75095f',1,'Actions::Drawing']]],
-  ['drawtext_10',['drawText',['../namespace_actions_1_1_drawing.html#a65ad24fdc24bf5e8825d27d36769296b',1,'Actions::Drawing']]]
+  ['drawallplayers_7',['drawAllPlayers',['../namespace_actions_1_1_drawing.html#ada82102bdec4f27f385c2eb8bfdd156e',1,'Actions::Drawing']]],
+  ['drawgoalsonscreen_8',['drawGoalsOnScreen',['../namespace_actions_1_1_drawing.html#a0ccf6c457a66f418a6a6707f6e99e35c',1,'Actions::Drawing']]],
+  ['drawing_2epy_9',['Drawing.py',['../_drawing_8py.html',1,'']]],
+  ['drawrectangleonscreen_10',['drawRectangleOnScreen',['../namespace_actions_1_1_drawing.html#a49fac2bdf9f0b38ccb520e1106817007',1,'Actions::Drawing']]],
+  ['drawtext_11',['drawText',['../namespace_actions_1_1_drawing.html#a65ad24fdc24bf5e8825d27d36769296b',1,'Actions::Drawing']]]
 ];

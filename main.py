@@ -136,6 +136,9 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         gameIsRunning(
             75, screen, surface, soccerField, ball, soccerRobot1, soccerRobot2
         )
+        
+        # Update the display
+        pygame.display.flip()
 
         # Ensure the window gets updated
         pygame.display.update()

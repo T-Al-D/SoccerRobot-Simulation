@@ -100,16 +100,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a65ad24fdc24bf5e8825d27d36769296b" id="r_a65ad24fdc24bf5e8825d27d36769296b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ad24fdc24bf5e8825d27d36769296b">drawText</a> (str text)</td></tr>
 <tr class="memdesc:a65ad24fdc24bf5e8825d27d36769296b"><td class="mdescLeft">&#160;</td><td class="mdescRight">create label  <br /></td></tr>
 <tr class="separator:a65ad24fdc24bf5e8825d27d36769296b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addbd524e1823265ccba855554c75095f" id="r_addbd524e1823265ccba855554c75095f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addbd524e1823265ccba855554c75095f">drawRectangleOnScreen</a> (pygame.Surface displayScreen, pygame.Rect rectangle, pygame.image image)</td></tr>
-<tr class="memdesc:addbd524e1823265ccba855554c75095f"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw ball on screen create a rectangle and draw it on screen with an image on it  <br /></td></tr>
-<tr class="separator:addbd524e1823265ccba855554c75095f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea685d516be795d8b449705a02439e4" id="r_a9ea685d516be795d8b449705a02439e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ea685d516be795d8b449705a02439e4">drawAllPlayers</a> (pygame.Surface displayScreen, list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] playerList)</td></tr>
-<tr class="memdesc:a9ea685d516be795d8b449705a02439e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw all players on screen uses other function drawPlayer(...) to draw all players (for-loop)  <br /></td></tr>
-<tr class="separator:a9ea685d516be795d8b449705a02439e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fac2bdf9f0b38ccb520e1106817007" id="r_a49fac2bdf9f0b38ccb520e1106817007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49fac2bdf9f0b38ccb520e1106817007">drawRectangleOnScreen</a> (pygame.Surface surface, pygame.Rect rectangle, pygame.image image)</td></tr>
+<tr class="memdesc:a49fac2bdf9f0b38ccb520e1106817007"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw ball on screen create a rectangle and draw it on screen with an image on it  <br /></td></tr>
+<tr class="separator:a49fac2bdf9f0b38ccb520e1106817007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccf6c457a66f418a6a6707f6e99e35c" id="r_a0ccf6c457a66f418a6a6707f6e99e35c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccf6c457a66f418a6a6707f6e99e35c">drawGoalsOnScreen</a> (pygame.Surface surface, list[<a class="el" href="class_classes_1_1_goal_1_1_goal.html">Goal</a>] goals, tuple[int] color)</td></tr>
+<tr class="memdesc:a0ccf6c457a66f418a6a6707f6e99e35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the goals onto the screen/surface create a rectangle, but only with border  <br /></td></tr>
+<tr class="separator:a0ccf6c457a66f418a6a6707f6e99e35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada82102bdec4f27f385c2eb8bfdd156e" id="r_ada82102bdec4f27f385c2eb8bfdd156e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada82102bdec4f27f385c2eb8bfdd156e">drawAllPlayers</a> (pygame.Surface surface, list[<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a>] playerList)</td></tr>
+<tr class="memdesc:ada82102bdec4f27f385c2eb8bfdd156e"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw all players on screen uses other function drawPlayer(...) to draw all players (for-loop)  <br /></td></tr>
+<tr class="separator:ada82102bdec4f27f385c2eb8bfdd156e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a9ea685d516be795d8b449705a02439e4" name="a9ea685d516be795d8b449705a02439e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea685d516be795d8b449705a02439e4">&#9670;&#160;</a></span>drawAllPlayers()</h2>
+<a id="ada82102bdec4f27f385c2eb8bfdd156e" name="ada82102bdec4f27f385c2eb8bfdd156e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada82102bdec4f27f385c2eb8bfdd156e">&#9670;&#160;</a></span>drawAllPlayers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -117,7 +120,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Actions.Drawing.drawAllPlayers </td>
           <td>(</td>
-          <td class="paramtype">pygame.Surface</td>          <td class="paramname"><span class="paramname"><em>displayScreen</em></span>, </td>
+          <td class="paramtype">pygame.Surface</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -131,7 +134,7 @@ Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd>drawPlayer</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayScreen</td><td>on what surface to draw the objects (pygame.Surface) </td></tr>
+    <tr><td class="paramname">surface</td><td>on what surface to draw the objects (pygame.Surface) </td></tr>
     <tr><td class="paramname">playerList</td><td>list with all players to be drawn</td></tr>
   </table>
   </dd>
@@ -140,8 +143,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="addbd524e1823265ccba855554c75095f" name="addbd524e1823265ccba855554c75095f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addbd524e1823265ccba855554c75095f">&#9670;&#160;</a></span>drawRectangleOnScreen()</h2>
+<a id="a0ccf6c457a66f418a6a6707f6e99e35c" name="a0ccf6c457a66f418a6a6707f6e99e35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccf6c457a66f418a6a6707f6e99e35c">&#9670;&#160;</a></span>drawGoalsOnScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Actions.Drawing.drawGoalsOnScreen </td>
+          <td>(</td>
+          <td class="paramtype">pygame.Surface</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list[<a class="el" href="class_classes_1_1_goal_1_1_goal.html">Goal</a>]</td>          <td class="paramname"><span class="paramname"><em>goals</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">tuple[int]</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw the goals onto the screen/surface create a rectangle, but only with border </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surface</td><td>on what surface to draw the objects (pygame.Surface) </td></tr>
+    <tr><td class="paramname">goals</td><td>list of goals to be drawn</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a49fac2bdf9f0b38ccb520e1106817007" name="a49fac2bdf9f0b38ccb520e1106817007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49fac2bdf9f0b38ccb520e1106817007">&#9670;&#160;</a></span>drawRectangleOnScreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,7 +188,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">Actions.Drawing.drawRectangleOnScreen </td>
           <td>(</td>
-          <td class="paramtype">pygame.Surface</td>          <td class="paramname"><span class="paramname"><em>displayScreen</em></span>, </td>
+          <td class="paramtype">pygame.Surface</td>          <td class="paramname"><span class="paramname"><em>surface</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -168,7 +207,7 @@ Functions</h2></td></tr>
 <p>draw ball on screen create a rectangle and draw it on screen with an image on it </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">displayScreen</td><td>on what surface to draw the objects (pygame.Surface) </td></tr>
+    <tr><td class="paramname">surface</td><td>on what surface to draw the objects (pygame.Surface) </td></tr>
     <tr><td class="paramname">image</td><td>a pygame.image to draw on the surface</td></tr>
   </table>
   </dd>
