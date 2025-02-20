@@ -29,7 +29,9 @@ class Goal:
         self._status: int = 0
         self._score: int = 0
 
-        self._rectangle = pygame.Rect(positionX, positionY, width, height)
+        self._rectangle = pygame.Rect(
+            self._positionX, self._positionY, self._width, self._height
+        )
 
     @property
     def width(self):
@@ -71,6 +73,6 @@ class Goal:
     def rectangle(self):
         return self._rectangle
 
-    @status.setter
-    def rectangle(self, value: int):
-        self._rectangle = value
+    @rectangle.setter
+    def rectangle(self, value):
+        self._rectangle: pygame.Rect = value

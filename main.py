@@ -60,15 +60,19 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
     # mitte des Feldes
     middleHeight = int((internalHeight) / Y_DIVISOR)
-    goalWidth = 62
-    goalHeight = 150
+    goalWidth: int = 62
+    goalHeight: int = 150
+
     # goals for the team
     team1Goal = Goal(
-        OUTER_PADDING + 2, middleHeight - int(goalHeight / 2.26), goalWidth, goalHeight
+        int(OUTER_PADDING + 2),
+        int(middleHeight - goalHeight / 2.26),
+        goalWidth,
+        goalHeight,
     )
     team2Goal = Goal(
-        screenWidth - 4.3 * OUTER_PADDING,
-        middleHeight - int(goalHeight / 2.26),
+        int(screenWidth - 4.3 * OUTER_PADDING),
+        int(middleHeight - goalHeight / 2.26),
         goalWidth,
         goalHeight,
     )

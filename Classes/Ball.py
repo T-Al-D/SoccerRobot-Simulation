@@ -21,9 +21,7 @@ class Ball:
         self._field: SoccerField = field
         self._currentDirection: int = Const.STANDING_STILL
         self._positionX: int = int(field.width / 2.07)
-        self._positionY: int = int(
-            (field.height - Const.TOP_MARGIN) / (Const.Y_DIVISOR - 0.3)
-        )
+        self._positionY: int = int(field.height / (Const.Y_DIVISOR - 0.1))
         self._ballStatus: int = 0
         self._field.ball = self
 
@@ -141,6 +139,14 @@ class Ball:
             case _:
                 pass
 
+        # after each change of x or y, set the internal rectangle
+        self.rectangle.x = self.positionX
+        self.rectangle.y = self.positionY
+
+    def resetBallToMiddle(self):
+        self.positionX = int(self.field.width / 2.07)
+        self.positionY = int(self.field.height / (Const.Y_DIVISOR - 0.1))
+        
         # after each change of x or y, set the internal rectangle
         self.rectangle.x = self.positionX
         self.rectangle.y = self.positionY

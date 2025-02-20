@@ -27,7 +27,7 @@ def playersNextChoice(player: SoccerRobot, otherPlayer: SoccerRobot, ball: Ball)
     distanceYToOtherPlayer = otherPlayer.positionY - player.positionY
 
     # start acting at this distance
-    actingDistance: int = int(player.size * 1.1)
+    actingDistance: int = int(player.size * 1.2)
 
     playersNextMove: int = 0
     # Determine the movement direction based on the differences between player and ball

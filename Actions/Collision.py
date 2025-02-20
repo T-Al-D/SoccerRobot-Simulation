@@ -8,6 +8,8 @@ import pygame
 
 from Actions.Movement import playerCollideMove
 from Classes.Ball import Ball
+from Classes.Goal import Goal
+from Classes.SoccerField import SoccerField
 from Classes.SoccerRobot import SoccerRobot
 from Constants import Const
 
@@ -52,3 +54,19 @@ def playerCollideWithPlayer(players: list[SoccerRobot]):
                     playerCollideMove(player)
                     # Exit the loop after correcting position
                     break
+
+
+def checkBallCollisionWithGoal(ball: Ball, goals: list[Goal]):
+    """!
+    @brief if the ball as any collision with any goal,
+    reset ball position and give Team Points
+
+    @param ball the soccer-ball object
+
+    @return void This function does not return a value.
+    """
+    # Loop through each goal and check for collision
+    for goal in goals:
+        if ball.rectangle.colliderect(goal.rectangle):
+            print("GOAL!!!")
+            ball.resetBallToMiddle()

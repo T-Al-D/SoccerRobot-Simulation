@@ -39,7 +39,7 @@ def drawRectangleOnScreen(
     surface.blit(image, rectangle)
 
 
-def drawGoalsInScreen(surface: pygame.Surface, goals: list[Goal], color: tuple[int]):
+def drawGoalsOnScreen(surface: pygame.Surface, goals: list[Goal], color: tuple[int]):
     """!
     @brief draw the goals onto the screen/surface
     create a rectangle, but only with border
@@ -53,7 +53,7 @@ def drawGoalsInScreen(surface: pygame.Surface, goals: list[Goal], color: tuple[i
         pygame.draw.rect(
             surface,
             color,
-            (goal.positionX, goal.positionY, goal.width, goal.height),
+            goal.rectangle,
             width=5,
         )
 

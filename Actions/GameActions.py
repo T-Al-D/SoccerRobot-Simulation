@@ -7,9 +7,10 @@ import pygame
 
 from Actions.Collision import (
     ballMoveOnPlayerCollision,
+    checkBallCollisionWithGoal,
     playerCollideWithPlayer,
 )
-from Actions.Drawing import drawGoalsInScreen, drawRectangleOnScreen, drawText
+from Actions.Drawing import drawGoalsOnScreen, drawRectangleOnScreen, drawText
 from Actions.Movement import playerManualMove
 from Actions.RobotChoice import playersNextChoice
 from Classes.Ball import Ball
@@ -68,7 +69,7 @@ def gameIsRunning(
     drawRectangleOnScreen(surfaceLayer, ball.rectangle, ball.image)
 
     # draw the goals to make them obvious
-    drawGoalsInScreen(surfaceLayer, [field.team1Goal, field.team2Goal], (255, 255, 225))
+    drawGoalsOnScreen(surfaceLayer, [field.team1Goal, field.team2Goal], (255, 255, 225))
 
     # playerRectangles for collision detection
     drawAllPlayers(surfaceLayer, field.players)
@@ -91,6 +92,8 @@ def gameIsRunning(
     ballMoveOnPlayerCollision(field.players, ball)
     # check collision between players
     playerCollideWithPlayer(field.players)
+    # check for ball collision with goal
+    checkBallCollisionWithGoal(ball, [field.team1Goal, field.team2Goal])
 
     ################# RESET #####################
     for player in field.players:
