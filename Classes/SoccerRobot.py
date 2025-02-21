@@ -5,6 +5,7 @@
 
 import pygame
 from Actions.Images import loadAndScaleImage
+from Classes.Goal import Goal
 from Classes.SoccerField import SoccerField
 from Constants import Const
 
@@ -24,6 +25,7 @@ class SoccerRobot:
         positionY: int,
         imagePath: str,
         field: SoccerField,
+        assignedGoal: Goal,
     ):
         """!
         @brief Constructor for SoccerRobot class.
@@ -42,6 +44,7 @@ class SoccerRobot:
         self._message: str = None
         self._collision: bool = False
         self._field: SoccerField = field
+        self._assignedGoal: Goal = assignedGoal
 
         # create the rectangle object
         self._rectangle = pygame.Rect(self._positionX, self._positionY, size, size)

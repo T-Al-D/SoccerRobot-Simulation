@@ -66,7 +66,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
     # goals for the team
     team1Goal = Goal(
-        int(OUTER_PADDING + 2),
+        int(OUTER_PADDING + 3),
         int(middleHeight - goalHeight / 2.26),
         goalWidth,
         goalHeight,
@@ -102,7 +102,9 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         middleHeight,
         "resources/SoccerRobotPlayer.png",
         soccerField,
+        team2Goal,
     )
+
     soccerRobot2 = SoccerRobot(
         2,
         2,
@@ -112,6 +114,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
         middleHeight,
         "resources/SoccerRobotPlayer.png",
         soccerField,
+        team1Goal,
     )
     soccerField.players.append(soccerRobot1)
     soccerField.players.append(soccerRobot2)
@@ -150,6 +153,7 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
         # Ensure the window gets updated
         pygame.display.update()
+
 
 # "main" function, all objects are defined here
 # https://stackoverflow.com/questions/71576307/how-can-i-generate-getter-and-setter-in-vscode-python-automatically-for-private
