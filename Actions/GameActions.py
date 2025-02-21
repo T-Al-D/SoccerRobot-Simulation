@@ -38,7 +38,7 @@ def gameIsRunning(
 
     @param fps frame rate limit
     @param displayScreen the screen where everything is shown
-    @param surfaceLayer a "layer" ontop the screen -> accepts alpha argument
+    @param surfaceLayer a "layer" ontop the screen -> accepts alpha argument for opacity
     @param field The `SoccerField` object representing the game/simulation field.
     @param ball the ball object
     @param player1 The `SoccerRobot` object representing the first player.

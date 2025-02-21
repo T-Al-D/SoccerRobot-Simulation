@@ -73,3 +73,17 @@ def drawAllPlayers(surface: pygame.Surface, playerList: list[SoccerRobot]):
     # draw all the player on the field and append the created rectangle into array
     for player in playerList:
         drawRectangleOnScreen(surface, player.rectangle, player.image)
+
+
+def drawPausePopUp(surface: pygame.Surface):
+    """!
+    @brief draw pause popUp ontop of the surface
+
+    @param surface where everything else is drawn
+
+    @return void
+    """
+    pygame.draw.rect(surface, (175, 125, 175), [10, 10, 300, 30])
+    font = pygame.font.Font(None, 36)
+    text = font.render("PAUSE! Enter to contine!", True, (0, 0, 0))
+    surface.blit(text, (15, 15))

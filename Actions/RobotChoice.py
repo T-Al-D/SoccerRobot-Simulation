@@ -72,5 +72,3 @@ def playersNextChoice(player: SoccerRobot, otherPlayer: SoccerRobot, ball: Ball)
     # print(f"playersNextMove {playersNextMove} ")
     player.currentDirection = playersNextMove
     player.move()
-    # playersNextMove = random.choice(Const.ALL_BASIC_ARROWKEYS)
-    # playerMovement(playersNextMove, player)
