@@ -68,5 +68,4 @@ def checkBallCollisionWithGoal(ball: Ball, goals: list[Goal]):
     # Loop through each goal and check for collision
     for goal in goals:
         if ball.rectangle.colliderect(goal.rectangle):
-            print("GOAL!!!")
             ball.resetBallToMiddle()

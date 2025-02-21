@@ -9,6 +9,7 @@ import os
 import pygame
 
 # classes from the folders
+from Actions.Pause import pauseGame
 from Classes.Goal import Goal
 from Classes.Ball import Ball
 from Classes.SoccerField import SoccerField
@@ -129,22 +130,26 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
         # to react to every event, we scan all possible events
         for event in pygame.event.get():
+            # quit the simulation
             if event.type == pygame.QUIT:
                 running = False
+
+            # pause simulation
+            if event.type == pygame.KEYDOWN:
+                keys = pygame.key.get_pressed()
+                if keys[pygame.K_p]:
+                    running = pauseGame(running, screen, surface)
 
         # all game logic is in here
         gameIsRunning(
             75, screen, surface, soccerField, ball, soccerRobot1, soccerRobot2
         )
-        
+
         # Update the display
         pygame.display.flip()
 
         # Ensure the window gets updated
         pygame.display.update()
-
-    pygame.quit()
-
 
 # "main" function, all objects are defined here
 # https://stackoverflow.com/questions/71576307/how-can-i-generate-getter-and-setter-in-vscode-python-automatically-for-private
@@ -154,4 +159,5 @@ if __name__ == "__main__":
     simulation runs in endless while-loop, until exit
     """
     runSimulation()
+    pygame.quit()
     sys.exit()
