@@ -11,14 +11,18 @@
 
 ### Documentation generated with doxygen : https://www.doxygen.nl/
 
-Commands: doxygen -g, doxygen Doxyfile
+Commands:
+
+- doxygen -g
+- doxygen Doxyfile
 
 ### Images from flatIcon (-> detailed information in "resources"-folder) : https://www.flaticon.com/
 
 ### Diagramms created with graphiz, code2flow and pyreverse
 
-Commands: 
-- pyreverse -o png -p SoccerRobot-Simultaion Classes/ (for Classes) 
+Commands:
+
+- pyreverse -o png -p SoccerRobot-Simultaion Classes/ (for Classes)
 - code2flow Actions (for the Methods)
 
 ### Tests with pytest:

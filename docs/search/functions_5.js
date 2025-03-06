@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['field_0',['field',['../class_classes_1_1_ball_1_1_ball.html#a16689a83a9f2f7266ee35a81642a045b',1,'Classes.Ball.Ball.field(self)'],['../class_classes_1_1_ball_1_1_ball.html#a5a69cbdf7a48c8a7a99d695302f0614c',1,'Classes.Ball.Ball.field(self, value)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a6c1799948722273296f07e0a5dfe4b51',1,'Classes.SoccerRobot.SoccerRobot.field(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ab51a492d5029c94d835b752d167d3eda',1,'Classes.SoccerRobot.SoccerRobot.field(self, value)']]]
+  ['endgame_0',['endGame',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a643254f7e64dbf04cc20440ca71ca35b',1,'Classes::SoccerField::SoccerField']]],
+  ['errornotification_1',['errorNotification',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a9ad0437abf71c1e7265e51de2c1b918d',1,'Classes.SoccerRobot.SoccerRobot.errorNotification(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a59c82e82a2fd7c7047f2202a844731ca',1,'Classes.SoccerRobot.SoccerRobot.errorNotification(self, int value)']]],
+  ['evadeotherplayer_2',['evadeOtherPlayer',['../namespace_actions_1_1_robot_choice.html#a98e3b9e8655827368592715ca17da201',1,'Actions::RobotChoice']]]
 ];

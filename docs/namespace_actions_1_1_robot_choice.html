@@ -97,19 +97,121 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abb68202c1f27136e72e97220b8053f72" id="r_abb68202c1f27136e72e97220b8053f72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb68202c1f27136e72e97220b8053f72">playersNextChoice</a> (<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> otherPlayer, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
-<tr class="memdesc:abb68202c1f27136e72e97220b8053f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">generated the next possible move for the soccerRobot  <br /></td></tr>
-<tr class="separator:abb68202c1f27136e72e97220b8053f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db0a508fe824d8a67302bd80e727bcd" id="r_a1db0a508fe824d8a67302bd80e727bcd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1db0a508fe824d8a67302bd80e727bcd">kickBall</a> (int distanceXPlayerToBall, int distanceYPlayerToBall)</td></tr>
+<tr class="memdesc:a1db0a508fe824d8a67302bd80e727bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">kick the ball in one direction  <br /></td></tr>
+<tr class="separator:a1db0a508fe824d8a67302bd80e727bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438223976a6264bff3cee6453e5ac31a" id="r_a438223976a6264bff3cee6453e5ac31a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a438223976a6264bff3cee6453e5ac31a">goAroundBall</a> (<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
+<tr class="memdesc:a438223976a6264bff3cee6453e5ac31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">go around the ball befor kicking it  <br /></td></tr>
+<tr class="separator:a438223976a6264bff3cee6453e5ac31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e3b9e8655827368592715ca17da201" id="r_a98e3b9e8655827368592715ca17da201"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98e3b9e8655827368592715ca17da201">evadeOtherPlayer</a> (int distanceXToOtherPlayer, int distanceYToOtherPlayer)</td></tr>
+<tr class="memdesc:a98e3b9e8655827368592715ca17da201"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate move to evade otherPlayer  <br /></td></tr>
+<tr class="separator:a98e3b9e8655827368592715ca17da201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08aff81f928bdee3660f3a24dc3adb3" id="r_af08aff81f928bdee3660f3a24dc3adb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af08aff81f928bdee3660f3a24dc3adb3">playersNextChoice</a> (<a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> player, <a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a> otherPlayer, <a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a> ball)</td></tr>
+<tr class="memdesc:af08aff81f928bdee3660f3a24dc3adb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate the next possible move for the soccerRobot  <br /></td></tr>
+<tr class="separator:af08aff81f928bdee3660f3a24dc3adb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="abb68202c1f27136e72e97220b8053f72" name="abb68202c1f27136e72e97220b8053f72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb68202c1f27136e72e97220b8053f72">&#9670;&#160;</a></span>playersNextChoice()</h2>
+<a id="a98e3b9e8655827368592715ca17da201" name="a98e3b9e8655827368592715ca17da201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e3b9e8655827368592715ca17da201">&#9670;&#160;</a></span>evadeOtherPlayer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Actions.RobotChoice.playersNextChoice </td>
+          <td class="memname"> int Actions.RobotChoice.evadeOtherPlayer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>distanceXToOtherPlayer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>distanceYToOtherPlayer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>generate move to evade otherPlayer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>one soccerRobot </td></tr>
+    <tr><td class="paramname">otherPlayer</td><td>the soccerRobot to consider</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nextPossibleMove as int </dd></dl>
+
+</div>
+</div>
+<a id="a438223976a6264bff3cee6453e5ac31a" name="a438223976a6264bff3cee6453e5ac31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438223976a6264bff3cee6453e5ac31a">&#9670;&#160;</a></span>goAroundBall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> int Actions.RobotChoice.goAroundBall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a></td>          <td class="paramname"><span class="paramname"><em>player</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_classes_1_1_ball_1_1_ball.html">Ball</a></td>          <td class="paramname"><span class="paramname"><em>ball</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>go around the ball befor kicking it </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>one soccerRobot </td></tr>
+    <tr><td class="paramname">ball</td><td>ball-object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nextPossibleMove CONST-integer for the next move </dd></dl>
+
+</div>
+</div>
+<a id="a1db0a508fe824d8a67302bd80e727bcd" name="a1db0a508fe824d8a67302bd80e727bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db0a508fe824d8a67302bd80e727bcd">&#9670;&#160;</a></span>kickBall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> int Actions.RobotChoice.kickBall </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>distanceXPlayerToBall</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>distanceYPlayerToBall</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>kick the ball in one direction </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distanceXPlayerToBall</td><td>the x distance betwwen player and ball </td></tr>
+    <tr><td class="paramname">distanceYPlayerToBall</td><td>the y distance betwwen player and ball</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nextPossibleMove CONST-integer for the next move </dd></dl>
+
+</div>
+</div>
+<a id="af08aff81f928bdee3660f3a24dc3adb3" name="af08aff81f928bdee3660f3a24dc3adb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08aff81f928bdee3660f3a24dc3adb3">&#9670;&#160;</a></span>playersNextChoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> int Actions.RobotChoice.playersNextChoice </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_classes_1_1_soccer_robot_1_1_soccer_robot.html">SoccerRobot</a></td>          <td class="paramname"><span class="paramname"><em>player</em></span>, </td>
         </tr>
@@ -126,7 +228,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>generated the next possible move for the soccerRobot </p>
+<p>generate the next possible move for the soccerRobot </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>one soccerRobot </td></tr>

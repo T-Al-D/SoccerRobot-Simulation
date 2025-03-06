@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['endgame_0',['endGame',['../class_classes_1_1_soccer_field_1_1_soccer_field.html#a643254f7e64dbf04cc20440ca71ca35b',1,'Classes::SoccerField::SoccerField']]],
-  ['errornotification_1',['errorNotification',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a9ad0437abf71c1e7265e51de2c1b918d',1,'Classes.SoccerRobot.SoccerRobot.errorNotification(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a59c82e82a2fd7c7047f2202a844731ca',1,'Classes.SoccerRobot.SoccerRobot.errorNotification(self, int value)']]]
+  ['drawallplayers_0',['drawAllPlayers',['../namespace_actions_1_1_drawing.html#ada82102bdec4f27f385c2eb8bfdd156e',1,'Actions::Drawing']]],
+  ['drawgoalsonscreen_1',['drawGoalsOnScreen',['../namespace_actions_1_1_drawing.html#a0ccf6c457a66f418a6a6707f6e99e35c',1,'Actions::Drawing']]],
+  ['drawpausepopup_2',['drawPausePopUp',['../namespace_actions_1_1_drawing.html#a39972e3ab32bc8ee5f69e66427de7b64',1,'Actions::Drawing']]],
+  ['drawrectangleonscreen_3',['drawRectangleOnScreen',['../namespace_actions_1_1_drawing.html#a49fac2bdf9f0b38ccb520e1106817007',1,'Actions::Drawing']]],
+  ['drawtext_4',['drawText',['../namespace_actions_1_1_drawing.html#a65ad24fdc24bf5e8825d27d36769296b',1,'Actions::Drawing']]]
 ];
