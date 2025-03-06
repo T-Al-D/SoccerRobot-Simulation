@@ -156,7 +156,6 @@ def runSimulation(runForDuration: bool = False, durationInMs: int = 0):
 
 
 # "main" function, all objects are defined here
-# https://stackoverflow.com/questions/71576307/how-can-i-generate-getter-and-setter-in-vscode-python-automatically-for-private
 if __name__ == "__main__":
     """!
     @brief Initializes all needed information for the programm/simulation

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['news_0',['Implemented with pygame : https://www.pygame.org/news',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]],
-  ['nl_1',['Documentation generated with doxygen : https://www.doxygen.nl/',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['north_5fdirection_2',['NORTH_DIRECTION',['../namespace_constants_1_1_const.html#a502ca311978226a149fcaab9f84b9621',1,'Constants::Const']]],
-  ['north_5feast_5fdirection_3',['NORTH_EAST_DIRECTION',['../namespace_constants_1_1_const.html#a65f050e34c0a6a8131412b0b25aac15b',1,'Constants::Const']]],
-  ['north_5fwest_5fdirection_4',['NORTH_WEST_DIRECTION',['../namespace_constants_1_1_const.html#abf20378c07445c9066744a026a4972a1',1,'Constants::Const']]]
+  ['main_0',['main',['../namespacemain.html',1,'']]],
+  ['main_2epy_1',['main.py',['../main_8py.html',1,'']]],
+  ['mentionofsources_2emd_2',['MentionOfSources.md',['../_mention_of_sources_8md.html',1,'']]],
+  ['message_3',['message',['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ac5aae770661529a942a19d101fc05d8b',1,'Classes.SoccerRobot.SoccerRobot.message(self)'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#a11c3b5c7eec325587a9de131e8aa6ac9',1,'Classes.SoccerRobot.SoccerRobot.message(self, str value)']]],
+  ['min_203_2010_20and_20pygame_202_206_4',['Simulation of soccer robots in Python (min. 3.10) and pygame (2.6)',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['move_5',['move',['../class_classes_1_1_ball_1_1_ball.html#ac4d135b00604e102382e3e90b2abdd1f',1,'Classes.Ball.Ball.move()'],['../class_classes_1_1_soccer_robot_1_1_soccer_robot.html#ad4abec55531e013b04ba17bc399c4bba',1,'Classes.SoccerRobot.SoccerRobot.move()']]],
+  ['movement_2epy_6',['Movement.py',['../_movement_8py.html',1,'']]]
 ];

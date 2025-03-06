@@ -7,5 +7,6 @@ var searchData=
   ['githubpage_20with_20documentation_3a_20https_3a_20t_20al_20d_20github_20io_20soccerrobot_20simulation_4',['githubpage with documentation: https://t-al-d.github.io/SoccerRobot-Simulation/',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
   ['goal_5',['Goal',['../class_classes_1_1_goal_1_1_goal.html',1,'Classes::Goal']]],
   ['goal_2epy_6',['Goal.py',['../_goal_8py.html',1,'']]],
-  ['graphiz_20code2flow_20and_20pyreverse_7',['Diagramms created with graphiz, code2flow and pyreverse',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
+  ['goaroundball_7',['goAroundBall',['../namespace_actions_1_1_robot_choice.html#a438223976a6264bff3cee6453e5ac31a',1,'Actions::RobotChoice']]],
+  ['graphiz_20code2flow_20and_20pyreverse_8',['Diagramms created with graphiz, code2flow and pyreverse',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]]
 ];

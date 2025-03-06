@@ -171,6 +171,14 @@ class SoccerRobot:
     def image(self, value):
         self._image: pygame.image = value
 
+    @property
+    def assignedGoal(self):
+        return self._assignedGoal
+
+    @rectangle.setter
+    def assignedGoal(self, value):
+        self._assignedGoal: Goal = value
+
     def move(self, extraSteps: float = 1.0):
         """!
         @brief moves the x or y position of the robot on the field
