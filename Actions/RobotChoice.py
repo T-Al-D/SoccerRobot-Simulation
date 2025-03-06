@@ -79,8 +79,8 @@ def evadeOtherPlayer(distanceXToOtherPlayer: int, distanceYToOtherPlayer: int) -
     """!
     @brief generate move to evade otherPlayer
 
-    @param player one soccerRobot
-    @param otherPlayer the soccerRobot to consider
+    @param distanceXToOtherPlayer distance x to player
+    @param distanceYToOtherPlayer distance y to player
 
     @return nextPossibleMove as int
     """
